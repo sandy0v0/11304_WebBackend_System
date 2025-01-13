@@ -1,7 +1,7 @@
 <?php
  
 // 去資料庫建一個db99的資料庫，要複製school的classes，點classes再去操作頁面，copy table to (database.table)，直接執行即可
-// text
+
 session_start();
 
 class DB{
