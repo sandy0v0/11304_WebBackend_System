@@ -12,12 +12,41 @@
     <link rel="icon" href="./images/jea01-jarhz-001.ico" type="image/x-icon" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
+    <!-- 引入AOS的CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
 
     <style>
         body {
             background-color: rgb(245, 255, 255);
+        }
+
+        .header-top {
+            /* width: 100%; */
+            overflow: hidden;
+            /* 防止內容溢出 */
+            margin-left: 12px;
+            margin-right: 12px;
+        }
+
+        .header-top img {
+            width: 100%;
+            height: auto;
+            /* 確保圖片等比例縮放 */
+            display: block;
+            /* 移除圖片下方多餘的空白 */
+            max-height: 230px;
+            /* 可根據需求設定最大高度 */
+            object-fit: cover;
+            /* 確保圖片填滿容器 */
+            object-position: 50% 10%;
+
+        }
+
+        /* 避免圖片遮擋原有導航欄 */
+        .navbar {
+            margin-top: 160px;
+            /* 根據 header-top 的高度調整 */
         }
 
         .mynavbar {
@@ -45,7 +74,7 @@
         .carousel-inner img {
             width: 100%;
             max-width: 1920px;
-            max-height: 1000px;
+            max-height: 750px;
             object-fit: cover;
             /* 保持圖片的比例並覆蓋容器 */
         }
@@ -81,7 +110,7 @@
         /* 當螢幕寬度大於 1200px 時，圖片最大高度為 1000px */
         @media (min-width: 1201px) {
             .carousel-inner img {
-                max-height: 900px;
+                max-height: 750px;
             }
         }
 
@@ -261,12 +290,17 @@
     <audio id="audioElement" src="./sounds/The First Noel.mp3" preload="auto"></audio> <!-- 替換為你實際的音頻文件路徑 -->
     </div>
     <!-- nav -->
+    <div class="header-top">
+        <img src="./upload/title-banner01.jpg" alt="Title Banner" class="img-fluid">
+    </div>
+
     <div class="container-fluid">
         <nav class="navbar navbar-expand-lg mynavbar navbar-dark fixed-top ">
+
             <div class="container-fluid">
                 <a class="navbar-brand" href="javascript:void(0)">
                     <!-- 可以在前面加上圖示 -->
-                    <img src="./images/001.jpg" alt="Bootstrap" width="45" height="４５" onclick="playsound(1)">
+                    <img src="./images/001.jpg" alt="Bootstrap" width="45" height="45" onclick="playsound(1)">
                     &nbsp;永續生活 Sustaina Life
                 </a>
                 <!-- 𝒞𝒽 ℂ𝕙𝕣𝕚𝕤 Christmas Music Toy Shop -->
@@ -349,21 +383,26 @@
                     aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
                 <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
             </div>
 
             <!-- 幻燈片 The slideshow/ 輪播圖carousel -->
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="./images/1.jpeg" alt="聖誕裝飾" class="d-block img-fluid w-100"
-                        style="object-position: 50% 30%;">
+                        style="object-position: 50% 50%; margin-top: 0px;">
                 </div>
                 <div class="carousel-item">
                     <img src="./images/6.jpg" alt="布偶" class="d-block img-fluid w-100"
-                        style="object-position: 50% 55%;">
+                        style="object-position: 50% 50%; margin-top: 0px;">
                 </div>
                 <div class="carousel-item">
                     <img src="./images/2.gif" alt="客製電子賀卡" class="d-block img-fluid w-100"
                         style="object-position: 50% 5%;">
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/7.jpg" alt="客製電子賀卡" class="d-block img-fluid w-100"
+                        style="object-position: 50% 50%; margin-top: 70px;">
                 </div>
 
                 <!-- 左右控制按鈕 Left and right controls/ 圖標 icons -->
@@ -383,7 +422,7 @@
     <br><br><br>
 
     <div class="container mt-5 py-5">
-        <div class="row">
+        <div class="row" data-aos="fade-up" data-aos-delay="200">
             <div class="col">
                 <h2 class="mt-3" style="color: lightseagreen;">🏠 關於我們</h2>
                 <p class="mt-3" style="color: lightseagreen;">
@@ -435,7 +474,7 @@
     <br><br><br>
     <hr class="featurette-divider mt-5" id="page1"><br>
 
-    <div class="container mt-5">
+    <div class="container mt-5" data-aos="fade-up" data-aos-delay="200">
         <div class="row">
             <div class="col">
                 <h2 style="color: lightcoral;">🛍️ 商品與服務介紹</h2>
@@ -630,7 +669,7 @@
     <br>
     <hr class="featurette-divider" id="page2"><br>
 
-    <div class="container px-4 py-4" id="custom-cards" onclick="playsound(1)">
+    <div class="container px-4 py-4" id="custom-cards" onclick="playsound(1)" data-aos="fade-up" data-aos-delay="200">
         <h2 class="pb-1" style="color: lightcoral;">✨ 新品預告</h2>
 
         <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-2">
@@ -1069,6 +1108,32 @@
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
 
+                <div>
+                    <li id="ctl00_holderSlider_wUctlSlideAD1_repSlideAD_ctl03_liSlideAD"
+                        style="background-repeat: no-repeat; background-position: center center; overflow: hidden; background-image: url(&quot;https://www.moeaea.gov.tw/ECW/content_images/3022.jpg?565123098&quot;); float: none; list-style: none; position: absolute; width: 646px; z-index: 0; display: none;"
+                        class="liSlideAD">
+                        <a id="ctl00_holderSlider_wUctlSlideAD1_repSlideAD_ctl03_lnkSlideAD" title="另開視窗，連結到節約能源"
+                            data-toggle="tooltip" href="../../ad04/home/Home.aspx" target="_blank"
+                            style="width: 100%; display: block;"><img
+                                id="ctl00_holderSlider_wUctlSlideAD1_repSlideAD_ctl03_imgSlideAD"
+                                src="https://www.moeaea.gov.tw/ECW/content_images/3022_s.jpg" alt="節約能源"
+                                style="border-width:0px;width: 100%;"></a>
+                    </li>
+                </div>
+
+                <div>
+                    <li id="ctl00_holderSlider_wUctlSlideAD1_repSlideAD_ctl04_liSlideAD"
+                        style="background-repeat: no-repeat; background-position: center center; overflow: hidden; background-image: url(&quot;https://www.moeaea.gov.tw/ECW/content_images/3023.jpg?1473752652&quot;); float: none; list-style: none; position: absolute; width: 646px; z-index: 0; display: none;"
+                        class="liSlideAD">
+                        <a id="ctl00_holderSlider_wUctlSlideAD1_repSlideAD_ctl04_lnkSlideAD" title="另開視窗，連結到總體能源政策"
+                            data-toggle="tooltip" href="../../ad05/home/Home.aspx" target="_blank"
+                            style="width: 100%; display: block;"><img
+                                id="ctl00_holderSlider_wUctlSlideAD1_repSlideAD_ctl04_imgSlideAD"
+                                src="https://www.moeaea.gov.tw/ECW/content_images/3023_s.jpg" alt="總體能源政策"
+                                style="border-width:0px;width: 100%;"></a>
+                    </li>
+                </div>
+
             </div>
         </div>
 
@@ -1082,7 +1147,7 @@
 
             <div class="row">
                 <!-- 左側欄位 - 產品介紹表格 -->
-                <div class="col-md-8 img-fluid">
+                <div class="col-md-8 img-fluid" data-aos="fade-up" data-aos-delay="200">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.7036499805677!2d121.41694067537684!3d25.04412927780987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a7bec9ad74b1%3A0xa639904a89f26435!2z5Yue5YuV6YOo5Yue5YuV5Yqb55m85bGV572y5YyX5Z-65a6c6Iqx6YeR6aas5YiG572y5rOw5bGx6IG35qWt6KiT57e05aC0!5e0!3m2!1szh-TW!2stw!4v1734597116467!5m2!1szh-TW!2stw"
                         width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
@@ -1121,7 +1186,7 @@
     <hr class="featurette-divider">
 
     <!-- FOOTER -->
-    <div class="container">
+    <div class="container" data-aos="fade-up" data-aos-delay="200">
         <footer class="py-2">
             <div class="row">
                 <div class="col-6 col-md-2 mb-3">
@@ -1327,6 +1392,19 @@
                 // 模擬轉跳至會員登入頁面
                 window.location.href = "login.html"; // 替換為實際的登入頁面路徑
             }
+        </script>
+
+        <!-- 引入AOS的JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+        <script>
+            // 初始化AOS
+            AOS.init({
+                offset: 100, // 設置滾動觸發的偏移量
+                delay: 0,    // 設置動畫延遲時間
+                duration: 600,  // 設置動畫持續時間
+                easing: 'ease-in-out', // 設置動畫的緩動效果
+                once: true, // 設置動畫只觸發一次
+            });
         </script>
 
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
