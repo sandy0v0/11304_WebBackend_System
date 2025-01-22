@@ -342,7 +342,7 @@
 <body>
     <!-- 音頻元素 -->
     <!-- <audio id="audioElement" src="./sounds/The First Noel.mp3" preload="auto"></audio> 替換為你實際的音頻文件路徑 -->
-    <div id="home"></div>
+
     <!-- nav -->
     <div class="container-fluid">
         <div class="header-top">
@@ -448,7 +448,7 @@
     </div>
 
     <!-- container1 輪播區-->
-
+    <div id="home"></div>
     <div class="container-fluid">
         <!-- 輪播圖 Carousel -->
         <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
@@ -505,18 +505,18 @@
     </div>
 
     <br class="mt-5" id="page0">
+    <br><br><br>
 
     <div class="container mt-5 py-5">
         <div class="row" data-aos="fade-up" data-aos-delay="200">
-            <!-- 關於我們 -->
-            <div class="col-12 col-lg-5">
+            <div class="col">
                 <h2 class="mt-3" style="color: lightseagreen;">🏡 關於我們</h2>
                 <p class="mt-3" style="color: gray;">
                     <img src="./images/smiling sun.png" alt="mdo" width="40" height="40" class="rounded-circle">
                     用知識點亮未來，用行動守護地球~
                 </p>
 
-                <div class="cols-1 cols-lg-2 align-items-stretch g-4 py-2">
+                <div class="row row-cols-1 row-cols-lg-2 align-items-stretch g-4 py-2">
                     <div class="col" style="text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);">
                         <div class="card card-cover h-600 overflow-hidden text-bg-white rounded-2 shadow-lg img-hover"
                             style="min-height: 300px; background-image: url('./images/esg.gif'); background-size: cover; background-position: top;">
@@ -538,45 +538,47 @@
                             </div>
                         </div>
                     </div>
+
+
+
+
+
                 </div>
-            </div>
+                <div class="col">
+                    <h2 class="mt-3" style="color: lightcoral;">👑 服務特色</h2>
+                    <p class="box mt-5 lead" style="color: coral;">🏆 客製化專區</p>
+                    <ul>
+                        <li>提供專屬設計諮詢服務，讓每件商品都能量身打造，特別適合作為紀念禮物。</li>
+                        <li>可根據顧客需求雕刻名字、祝福語或特定日期在商品上，增加專屬感。</li>
+                    </ul>
 
-            <!-- 最新消息 -->
-            <div class="col-12 col-lg-7">
-                <h2 class="mt-3" style="color: lightcoral;">👑 最新消息</h2>
-                <p class="box mt-5 lead" style="color: coral;">🏆 客製化專區</p>
-                <ul>
-                    <li>提供專屬設計諮詢服務，讓每件商品都能量身打造，特別適合作為紀念禮物。</li>
-                    <li>可根據顧客需求雕刻名字、祝福語或特定日期在商品上，增加專屬感。</li>
-                </ul>
+                    <p class="box mt-3 lead" style="color: coral;">🎁 禮物包裝與祝福小語</p>
+                    <ul>
+                        <li>免費提供精美包裝，並可選擇附加手寫祝福卡。</li>
+                        <li>節慶期間推出主題包裝，如聖誕節、情人節限定款。</li>
+                    </ul>
 
-                <p class="box mt-3 lead" style="color: coral;">🎁 禮物包裝與祝福小語</p>
-                <ul>
-                    <li>免費提供精美包裝，並可選擇附加手寫祝福卡。</li>
-                    <li>節慶期間推出主題包裝，如聖誕節、情人節限定款。</li>
-                </ul>
+                    <p class="box mt-3 lead" style="color: coral;">🌻 季節限定禮品</p>
+                    <ul>
+                        <li>每季推出特別商品組合，如春季花卉系列、冬季暖心禮盒等，為顧客帶來驚喜。</li>
+                    </ul>
 
-                <p class="box mt-3 lead" style="color: coral;">🌻 季節限定禮品</p>
-                <ul>
-                    <li>每季推出特別商品組合，如春季花卉系列、冬季暖心禮盒等，為顧客帶來驚喜。</li>
-                </ul>
-
-                <p class="box mt-3 lead" style="color: coral;">⚡ 快閃活動與工作坊</p>
-                <ul>
-                    <li>定期舉辦手工藝工作坊，如水晶球DIY、賀卡繪製，提升顧客參與感。</li>
-                    <li>與本地藝術家合作推出聯名商品，吸引藝文愛好者。</li>
-                </ul>
+                    <p class="box mt-3 lead" style="color: coral;">⚡ 快閃活動與工作坊</p>
+                    <ul>
+                        <li>定期舉辦手工藝工作坊，如水晶球DIY、賀卡繪製，提升顧客參與感。</li>
+                        <li>與本地藝術家合作推出聯名商品，吸引藝文愛好者。</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
 
     <br><br><br>
-    <br class="featurette-divider mt-5 py-5" id="page1"><br>
-    <br><br>
+    <hr class="featurette-divider mt-5" id="page1"><br>
+
 
 
     <div class="container-50 vh-self-50 text-center" style="margin-left: 12px; margin-right: 12px;">
-
         <div class="row g-2">
             <div class="col-4">
                 <p>
@@ -618,24 +620,11 @@
     <div class="container mt-5" data-aos="fade-up" data-aos-delay="200">
         <div class="row">
             <div class="col">
-                <h2 style="color: lightseagreen;" class=" py-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 128 128">
-                        <defs>
-                            <path id="notoV1GlobeShowingAmericas0"
-                                d="M127.65 64c0 35.15-28.5 63.65-63.66 63.65C28.85 127.65.35 99.15.35 64C.35 28.84 28.85.35 63.99.35c35.16 0 63.66 28.49 63.66 63.65" />
-                        </defs>
-                        <use fill="#006ca2" href="#notoV1GlobeShowingAmericas0" />
-                        <clipPath id="notoV1GlobeShowingAmericas1">
-                            <use href="#notoV1GlobeShowingAmericas0" />
-                        </clipPath>
-                        <g fill="#bdcf46" clip-path="url(#notoV1GlobeShowingAmericas1)">
-                            <path
-                                d="M108.99 82.74c-1.05-.79-3.19-1.75-4.38-1.93c-2.03-.31-3.13.4-4.08-1.75c-.79-1.79-1.38-2.91-2.79-4.39c-2.72-2.84-5.18-4.1-8.87-5.52h-6.28c-2.64-.72-5.29-1.66-7.64.44c-.25.22-.46.5-.69.75c-.26.28-1.43.38-1.81.48c-.53.13-1.09.29-1.65.3c-.86.02-2.04-.21-2.63-.89c-.34-.39-.54-1.16-.59-1.67c-.06-.68.23-1.27.24-1.92c.02-.58.05-1.25-.11-1.8c-.33-1.15-1.63-1.48-2.64-1.7c-.6-.13-1.19-.22-1.8-.42c-1.53-.52-.74-2.61-.09-3.54c.66-.95 1.61-1.61.02-2.48c-1.28-.69-2.85-.58-3.98.26c-1.08.82-1.79 2.41-3.1 2.82c-1.5.48-3.13-.62-4.55-.82c.14-1.89-.81-5.37-.76-6.23c.14-2.27 1.81-4.73 4-5.33s4.6-1.06 6.87-.82c3.51.37 3.36 2.25 5.19 4.7c.6.8 1.75 1.74 2.79 1.19c2.21-1.16 1.53-4.14 1.6-6.15c.11-3.13 2.12-5.02 4.04-7.33c.71-.85 1.43-1.69 2.13-2.55c.63-.78 1.37-1.51 2.43-1.71c.74-.13 1.65.01 2.4.01c1.22 0 3.55.41 4.26-.84c.66-1.18-.31-1.99-1.29-2.37c-.4-.16-1.08-.24-1.2-.74c-.41-1.75 1.47-1.81 2.64-2c1.06-.17 2.43-.52 3.24.46c.36.44.18.97.59 1.42c.75.81 2.68.35 3.49-.12c.94-.55 1.2-2.09 1.2-3.09c0-.52-.08-1.06-.38-1.49c-.8-1.14-3.15-1.66-4.33-2.33c-1.72-.98-3.32-2.14-4.89-3.33c-1.84-1.39-3.85-2.51-5.88-3.58c-1.75-.91-3.92-2.42-5.97-2.06c-.8.13-1.24.71-1.41 1.48c-.11.58-.38 1.17-.38 1.77c.01.73.35 1.4.56 2.08c.26.85.47 1.72-.2 2.43c-.64.67-2.06.65-2.8.1c-.9-.68-1.27-1.77-2.26-2.29c-1.1-.58-1.92-.74-3.15-.59c-1.15.14-2.53.28-3.68-.01c-1.1-.27-2.17-1.6-2.19-2.73c-.02-.81.16-1.94.93-2.39c.91-.52 2.42-.39 3.44-.47c.21-.01.41-.03.6-.05c.03-.01.06-.01.09-.01c.03-.01.07-.01.1-.01c.29-.04.56-.07.75-.12c-.01-.02-.04-.04-.05-.06c.16.3 1.07-1.02 1.1-1.17c.16-.66-.33-1.43-.09-2.05c.18-.46.83-.75 1.26-.89c.67-.21 1.36-.09 2.04-.02c.55.06 1.14.06 1.68.17c1.25.26 1.29 1.24 2.07 2c1.12 1.05 1.8.59 3.26.79c1.57.21 5.69 2.91 7.09.8c1.56-2.35-2.64-4.08-3.94-4.51c-2.05-.68-4.09-2.07-5.43-3.77c-.66-.84-1.18-1.86-1.16-2.96c.03-.89 0-2.26.83-2.83c.2-.13.42-.21.65-.22c.41-.04.86-.06 1.2.14c.5.31.91.91 1.17 1.42c.55 1.1.36 2.15 1.15 3.25c.79 1.07 1.82 1.94 2.78 2.84c2.49 2.32 5.24 4.38 8.43 5.6c1.72.66 3.53 1.17 5.16 2.07c1.85 1.04 2.53 2.38 3.76 3.97c3.45 4.43 13.57 2.99 11.2-4c-1.78-5.24-5.26-9.73-9.9-12.57c-2.23-1.36-4.23-3.25-6.48-4.51c-2.82-1.57-6.2-2.05-9.34-2.57c-3.71-.61-7.35-.89-11.1-1.06c-2.73-.12-5.62-.56-7.89 1.28c-1.21.97-4.77 4.34-4.84 5.74c-.07 1.34 1.69 2.06 1.97 3.29c.11.53.15 1-.26 1.4c-.45.44-1.07.58-1.17 1.28c-.08.61.15 1.02.39 1.54c.19.4.6 1.17.25 1.62c-.93 1.17-2.18-.94-2.26-1.74c-.12-1.3.29-2.43-1.03-3.25c-.89-.55-3.31-.79-3.68.51c-.18.62.52 1.22.44 1.94c-.17 1.46-1.14 1.09-2.25 1.28c-1.94.33-2.34 1.78-4.42.82c-.2-1.04.4-2.72-.61-3.42c-.81-.55-2.63-.15-3.54-.51c-2.28-.92-4.29-1.21-6.72-.49c-2.57.77-5.14 2.29-7.62 3.52c-3.19 1.58-8.18-.45-10.78 1.88l-.05.45c-2.14-.02-3.03.32-4.53 2.31c-1.08 1.43-1.63 2.81-2.28 4.39c-.49 1.2-1.51 2.3-1.7 3.64c-.12.94-.05 2.13.09 3.06c.07.52 4.7-.89 5.29-.82c2.15.28 3.81 2.36 5.53 3.47c1.47.93 3.25 1.89 3.51 3.68c.32 2.16-.08 4.57-.02 6.76c.12 4.35 4.62 7.66 7.3 10.67c1.19 1.34 1.29 3.01 2.46 4.27c.65.71 2.62 4.24 4.06 2.93c1.15-1.04-1.86-4.22-1.62-5.68c.13-.89 2.15.89 2.27 1.02c.84 1 1.28 2.44 1.72 3.65c.95 2.61 1.79 3.77 3.98 4.79c-.13 1.25 1.15 2.09 2.29 2.74c1.25.71 2.61.73 3.94 1.32c1.26.57 2.64.56 3.81 1.13c1.74.84.57 1.67 1.55 2.92c1.09 1.4 3.16.54 4.63.77c3.15.49 2.62 3.5 4.58 5.31c1.07 1.01 2.9.9 4.25 1.05c.53.06 1.22.07 1.64.45c1.05.93-.18 2.21-.58 3.12c-.55 1.22-.93 2.53-1.17 3.85c-.67 3.68-.53 7.79 2.15 10.64c2.92 3.11 6.49 4.52 7.6 8.96c.95 3.71.07 7.34-.61 11c-.42 2.2-3.43 6.02-.44 7.64c2.6 1.41 7.02-2.47 8.72-3.95c4.01-3.5 9.31-5.63 11.95-10.54c1.25-2.33 2.36-4.79 4.55-6.4c1.15-.85 2.48-1.41 3.71-2.12c2.61-1.49 4.17-4.66 5.34-7.29c1.38-3.19.11-4.99-2.39-6.86M61.9 26.46c.71-.17 1.67-.13 1.97-.06c1.15.28 2 1.18 2.88 1.9c.64.51 1.18 1.05 1.75 1.62c.37.37.72.7.64 1.31c-.06.53-.36.79-.84.84c-.87.09-1.26-.48-2.04-.61c-1.85-.31-2.62 2.81-4.47 1.96c-.47-.22-.33-.61-.33-1.11c-.01-.38 0-.72.14-1.05c.18-.42.47-.77.82-1.08c.22-.19.58-.34.75-.59c.41-.64-.17-1.32-.75-1.56c-.36-.15-.89-.16-1.12-.48c-.43-.61-.01-.93.6-1.09m74.12 34.62c-.02-3 .12-7.11-2.38-9.28c-2.31-2.01-5.16-.79-7.07 1.13c-3.7 3.73-5.2 10.77-2.12 15.3c1.14 1.68 2.59 3.08 4.49 3.52c1.86.43 5.41.66 6.32-1.24c.52-1.09.32-2.37.32-3.56c-.01-2.03.46-3.86.44-5.87" />
-                            <path
-                                d="M78.15 57.27c-.92-.46-1.27-1.24-1.88-1.86c-.3-.3-.66-.56-1.18-.72c-.98-.28-2.22-.17-3.23-.11c-1.49.09-5.29.34-5.48 2.43c-.25 2.67 3.42 2.37 5.24 2.34c1.25-.02 2.46-.48 3.71-.17c1.83.45 1.42 2.08 2.84 2.7c.51.22 2.09.52 2.58.56c1.82.16 6.19-.89 5.03-3.49c-1.05-2.39-5.76-.75-7.63-1.68" />
-                        </g>
-                    </svg> 永續生活
-                </h2>
+                <h2 style="color: lightcoral;">🛍️ 商品與服務介紹</h2>
+                <!-- <p>夢幻水晶球系列：
+                    每個水晶球內都有不同的故事，搭配音樂旋律，世界彷彿停滯在那美好的時刻，
+                    無論是冬季場景還是夢幻的聖誕村莊，都能帶來無限的溫馨感動。
+                </p> -->
                 <p class="mt-4 lead">🔴 夢幻水晶球系列</p>
                 <ul>
                     <li>星空音樂水晶球：內含星空景象，旋轉時發出溫柔的音樂，適合作為浪漫禮物。</li>
@@ -823,99 +812,93 @@
     <br>
     <hr class="featurette-divider" id="page2"><br>
 
-    <div class="container px-4 py-5" id="custom-cards" onclick="playsound(1)" data-aos="fade-up" data-aos-delay="200">
-        <h3 class="pb-1 " style="color: lightcoral;">🌱 淨零排放</h2>
-            <h2 class="fw-bold">你一定要知道的碳知識</h2>
-            <p class="py-1 fw-bold">2025年碳費開徵，從關鍵字文字雲發現，網友最常搜尋碳相關詞彙，包括碳費vs.碳稅、碳足跡盤查vs.碳盤查、碳中和vs.淨零排放，一次釐清，破解你的碳焦慮。
-            </p>
-            <div>
-                <iframe width="100%" height="315" src="https://cdn.wordart.com/iframe/2wkcy74bc2n7"></iframe>
-            </div>
+    <div class="container px-4 py-4" id="custom-cards" onclick="playsound(1)" data-aos="fade-up" data-aos-delay="200">
+        <h2 class="pb-1" style="color: lightcoral;">✨ 新品預告</h2>
 
-            <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-4">
-                <div class="col" style="text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);">
-                    <div class="card card-cover h-100 overflow-hidden text-bg-white rounded-4 shadow-lg img-hover"
-                        style="background-image: url('./images/esg.gif'); background-size: cover; background-position: center;">
-                        <div class="d-flex flex-column h-100 p-5 pb-3 text-dark text-shadow-1">
-                            <h3 class="mt-2 mb-4 lh-1 fw-bold">
-                                什麼是碳費？哪些人需要繳交碳費？
-                            </h3>
-                            <p>碳費（Carbon
-                                fee）是國際常用碳定價工具，是指「針對排放二氧化碳的行為」所徵收的費用。我國碳費徵收由環境部規劃，費率訂為每噸碳300元，2026年正式開始徵收，徵收對象為溫室氣體年排放量達2.5萬噸的電力、燃氣供應業及製造業，首批徵收業者超過500家，約1.55億噸碳排，占全國總排放量的54%。
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col" style="text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);">
-                    <div class="card card-cover h-100 overflow-hidden text-bg-white rounded-4 shadow-lg img-hover"
-                        style="background-image: url('./imgs/11.jpg'); background-size: cover; background-position: center;">
-                        <div class="d-flex flex-column h-100 p-5 pb-3 text-dark text-shadow-1">
-                            <h3 class="mt-2 mb-4 lh-1 fw-bold">
-                                碳費與碳稅有何不同？
-                            </h3>
-                            <p>碳費、碳稅兩者都是以價制量，藉由「碳排放貼上價格標籤」，提供企業經濟誘因，達到實質減少溫室氣體排放的目標。台灣採用碳費制度，碳費由「環境部」徵收，以專款專用方式使用在環境保護行動上；而國際上如英國、日本、加拿大等國，則由財政單位徵收碳稅（Carbon
-                                Tax），用途較廣，包含社會福利、所得稅減免、發展各項低碳基礎建設等。.5萬噸的電力、燃氣供應業及製造業，首批徵收業者超過500家，約1.55億噸碳排，占全國總排放量的54%。
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col" style="text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);">
-                    <div class="card card-cover h-100 overflow-hidden text-bg-white rounded-4 shadow-lg img-hover"
-                        style="background-image: url('./imgs/11.jpg'); background-size: cover; background-position: center;">
-                        <div class="d-flex flex-column h-100 p-5 pb-3 text-dark text-shadow-1">
-                            <h3 class="mt-2 mb-4 lh-1 fw-bold">
-                                碳足跡盤查、碳盤查有何不同？
-                            </h3>
-                            <p>碳足跡盤查與碳盤查都是針對溫室氣體排放量進行調查，最大的不同是調查對象，碳足跡盤查主要針對「產品或服務」的生命周期，而碳盤查主要鎖定「企業及組織」在營運過程中產生多少碳排。（實際案例可參考上述T觀點碳足跡盤查Step3和4）。
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col" style="text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);">
-                    <div class="card card-cover h-100 overflow-hidden text-bg-white rounded-4 shadow-lg img-hover"
-                        style="background-image: url('./imgs/11.jpg'); background-size: cover; background-position: center;">
-                        <div class="d-flex flex-column h-100 p-5 pb-3 text-dark text-shadow-1">
-                            <h3 class="mt-2 mb-4 lh-1 fw-bold">
-                                碳中和、淨零排放有什麼不同？
-                            </h3>
-                            <p>碳中和專注於控制驟增的二氧化碳（CO₂），卻忽略甲烷（CH₄）、氧化亞氮（N₂O）等暖化潛力更高的溫室氣體，取而代之的淨零排放（Net
-                                Zero）成為減緩氣候變遷主要訴求，目的在於讓所有種類的溫室氣體排放量與削減量達到平衡。淨零排放不是不排放，而是努力讓人為造成的溫室氣體排放極小化，再用負碳技術（移除碳排放量）、森林碳匯（種樹造林）等方法抵銷，達到淨零排放。
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col" style="text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);">
-                    <div class="card card-cover h-100 overflow-hidden text-bg-white rounded-4 shadow-lg img-hover"
-                        style="background-image: url('./imgs/11.jpg'); background-size: cover; background-position: center;">
-                        <div class="d-flex flex-column h-100 p-5 pb-3 text-dark text-shadow-1">
-                            <h3 class="mt-2 mb-4 lh-1 fw-bold">
-                                台灣碳權交易現況是什麼？
-                            </h3>
-                            <p>台灣2023年8月7日正式掛牌「台灣碳權交易所（簡稱碳交所）」，在同年12月22日啟動「國際碳權交易平台」，首批上架7個碳權專案，包括潔淨水源、太陽能發電、風力發電和沼氣發電。共27家企業參與（含金控子公司合計45家），共交易8.8萬噸二氧化碳當量碳權，成交價格介於每公噸3.9到12美元。
-                            </p>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col" style="text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);">
-                    <div class="card card-cover h-100 overflow-hidden text-bg-white rounded-4 shadow-lg img-hover"
-                        style="background-image: url('./imgs/11.jpg'); background-size: cover; background-position: center;">
-                        <div class="d-flex flex-column h-100 p-5 pb-3 text-dark text-shadow-1">
-                            <h3 class="mt-2 mb-4 lh-1 fw-bold">
-                                台灣人均碳排放量多少？
-                            </h3>
-                            <p>根據2024年中華民國國家溫室氣體排放清冊報告，台灣2022年燃料燃燒二氧化碳排放量為257,958千公噸二氧化碳當量（不包括二氧化碳移除量），占總溫室氣體排放量90.20%。2022年平均一個人11.06公噸二氧化碳當量，相較於1990年人均排放量約5.41公噸二氧化碳當量，30年已增加兩倍以上。
-                            </p>
-
-                        </div>
+        <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-2">
+            <div class="col" style="text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);">
+                <div class="card card-cover h-100 overflow-hidden text-bg-white rounded-4 shadow-lg img-hover"
+                    style="background-image: url('./images/esg.gif'); background-size: cover; background-position: center;">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-dark text-shadow-1">
+                        <h3 class="mt-2 mb-4 lh-1 fw-bold">
+                            什麼是碳費？哪些人需要繳交碳費？
+                        </h3>
+                        <p>碳費（Carbon
+                            fee）是國際常用碳定價工具，是指「針對排放二氧化碳的行為」所徵收的費用。我國碳費徵收由環境部規劃，費率訂為每噸碳300元，2026年正式開始徵收，徵收對象為溫室氣體年排放量達2.5萬噸的電力、燃氣供應業及製造業，首批徵收業者超過500家，約1.55億噸碳排，占全國總排放量的54%。
+                        </p>
                     </div>
                 </div>
             </div>
+
+            <div class="col" style="text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);">
+                <div class="card card-cover h-100 overflow-hidden text-bg-white rounded-4 shadow-lg img-hover"
+                    style="background-image: url('./imgs/11.jpg'); background-size: cover; background-position: center;">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-dark text-shadow-1">
+                        <h3 class="mt-2 mb-4 lh-1 fw-bold">
+                            碳費與碳稅有何不同？
+                        </h3>
+                        <p>碳費、碳稅兩者都是以價制量，藉由「碳排放貼上價格標籤」，提供企業經濟誘因，達到實質減少溫室氣體排放的目標。台灣採用碳費制度，碳費由「環境部」徵收，以專款專用方式使用在環境保護行動上；而國際上如英國、日本、加拿大等國，則由財政單位徵收碳稅（Carbon
+                            Tax），用途較廣，包含社會福利、所得稅減免、發展各項低碳基礎建設等。.5萬噸的電力、燃氣供應業及製造業，首批徵收業者超過500家，約1.55億噸碳排，占全國總排放量的54%。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col" style="text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);">
+                <div class="card card-cover h-100 overflow-hidden text-bg-white rounded-4 shadow-lg img-hover"
+                    style="background-image: url('./imgs/11.jpg'); background-size: cover; background-position: center;">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-dark text-shadow-1">
+                        <h3 class="mt-2 mb-4 lh-1 fw-bold">
+                            碳足跡盤查、碳盤查有何不同？
+                        </h3>
+                        <p>碳足跡盤查與碳盤查都是針對溫室氣體排放量進行調查，最大的不同是調查對象，碳足跡盤查主要針對「產品或服務」的生命周期，而碳盤查主要鎖定「企業及組織」在營運過程中產生多少碳排。（實際案例可參考上述T觀點碳足跡盤查Step3和4）。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col" style="text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);">
+                <div class="card card-cover h-100 overflow-hidden text-bg-white rounded-4 shadow-lg img-hover"
+                    style="background-image: url('./imgs/11.jpg'); background-size: cover; background-position: center;">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-dark text-shadow-1">
+                        <h3 class="mt-2 mb-4 lh-1 fw-bold">
+                            碳中和、淨零排放有什麼不同？
+                        </h3>
+                        <p>碳中和專注於控制驟增的二氧化碳（CO₂），卻忽略甲烷（CH₄）、氧化亞氮（N₂O）等暖化潛力更高的溫室氣體，取而代之的淨零排放（Net
+                            Zero）成為減緩氣候變遷主要訴求，目的在於讓所有種類的溫室氣體排放量與削減量達到平衡。淨零排放不是不排放，而是努力讓人為造成的溫室氣體排放極小化，再用負碳技術（移除碳排放量）、森林碳匯（種樹造林）等方法抵銷，達到淨零排放。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col" style="text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);">
+                <div class="card card-cover h-100 overflow-hidden text-bg-white rounded-4 shadow-lg img-hover"
+                    style="background-image: url('./imgs/11.jpg'); background-size: cover; background-position: center;">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-dark text-shadow-1">
+                        <h3 class="mt-2 mb-4 lh-1 fw-bold">
+                            台灣碳權交易現況是什麼？
+                        </h3>
+                        <p>台灣2023年8月7日正式掛牌「台灣碳權交易所（簡稱碳交所）」，在同年12月22日啟動「國際碳權交易平台」，首批上架7個碳權專案，包括潔淨水源、太陽能發電、風力發電和沼氣發電。共27家企業參與（含金控子公司合計45家），共交易8.8萬噸二氧化碳當量碳權，成交價格介於每公噸3.9到12美元。
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col" style="text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);">
+                <div class="card card-cover h-100 overflow-hidden text-bg-white rounded-4 shadow-lg img-hover"
+                    style="background-image: url('./imgs/11.jpg'); background-size: cover; background-position: center;">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-dark text-shadow-1">
+                        <h3 class="mt-2 mb-4 lh-1 fw-bold">
+                            台灣人均碳排放量多少？
+                        </h3>
+                        <p>根據2024年中華民國國家溫室氣體排放清冊報告，台灣2022年燃料燃燒二氧化碳排放量為257,958千公噸二氧化碳當量（不包括二氧化碳移除量），占總溫室氣體排放量90.20%。2022年平均一個人11.06公噸二氧化碳當量，相較於1990年人均排放量約5.41公噸二氧化碳當量，30年已增加兩倍以上。
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <br>
