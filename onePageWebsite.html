@@ -335,6 +335,67 @@
             color: red;
             /* 已選中時愛心為紅色 */
         }
+
+        /* 調整關於我們與最新消息之間的間距 */
+        .section-spacing {
+            margin-top: 5rem;
+            margin-bottom: 4rem;
+        }
+
+        /* 最新消息區塊虛線邊框與內邊距調整 */
+        .news-box {
+            border: 2px dashed #ccc;
+            padding: 1rem 1rem;
+            /* 增加更多的內邊距 */
+            border-radius: 12px;
+            /* 邊角圓滑 */
+            background-color: #f9f9f9;
+            /* 背景色，讓內容更突出 */
+        }
+
+        .box {
+            margin: 2.5rem 2rem 1.5rem 2rem;
+            cursor: pointer;
+        }
+
+        .box p {
+            display: none;
+            margin-top: 1rem;
+        }
+
+        .box:hover p,
+        .box.active p {
+            display: block;
+        }
+
+        .box span {
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* 顯示更多按鈕 */
+        .show-more {
+            position: absolute;
+            right: 30px;
+            background-color: #f0ad4e;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .show-more:hover {
+            background-color: #ec971f;
+        }
+
+        h2 {
+            color: indianred;
+        }
+
+        .lead {
+            color: dimgray;
+        }
     </style>
 
 </head>
@@ -509,16 +570,16 @@
     <div class="container mt-5 py-5">
         <div class="row" data-aos="fade-up" data-aos-delay="200">
             <!-- 關於我們 -->
-            <div class="col-12 col-lg-5">
-                <h2 class="mt-3" style="color: lightseagreen;">🏡 關於我們</h2>
-                <p class="mt-3" style="color: gray;">
+            <div class="col-12 col-lg-6">
+                <h2 class="mt-2 " style="color: indianred;">🏡 關於我們</h2>
+                <p class="mt-3 fw-bold" style="color: dimgray;">
                     <img src="./images/smiling sun.png" alt="mdo" width="40" height="40" class="rounded-circle">
-                    用知識點亮未來，用行動守護地球~
+                    &nbsp;用知識點亮未來，用行動守護地球
                 </p>
 
                 <div class="cols-1 cols-lg-2 align-items-stretch g-4 py-2">
                     <div class="col" style="text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);">
-                        <div class="card card-cover h-600 overflow-hidden text-bg-white rounded-2 shadow-lg img-hover"
+                        <div class="card card-cover h-600 overflow-hidden text-bg-white rounded-2  img-hover"
                             style="min-height: 300px; background-image: url('./images/esg.gif'); background-size: cover; background-position: top;">
                             <div class="d-flex flex-column h-600 p-5 pb-5 text-muted text-shadow-1">
                                 <div class="box text-center mt-5">
@@ -526,7 +587,7 @@
                                     <strong>
                                         我們是一群致力於推動可持續發展的倡導者，<br>
                                         <strong style="color: gold;">透過將ESG（環境、社會、治理）理念，<br>
-                                            融入食、衣、住、行、育、樂，</strong><br>
+                                            融入食、衣、住、行、育、樂、購，</strong><br>
                                         打造一個既環保又充滿正向影響的生活方式~<br>
                                         <br>
                                         相信從日常小事出發，<br>
@@ -542,33 +603,80 @@
             </div>
 
             <!-- 最新消息 -->
-            <div class="col-12 col-lg-7">
-                <h2 class="mt-3" style="color: lightcoral;">👑 最新消息</h2>
-                <p class="box mt-5 lead" style="color: coral;">🏆 客製化專區</p>
-                <ul>
-                    <li>提供專屬設計諮詢服務，讓每件商品都能量身打造，特別適合作為紀念禮物。</li>
-                    <li>可根據顧客需求雕刻名字、祝福語或特定日期在商品上，增加專屬感。</li>
-                </ul>
+            <div class="col-12 col-lg-6 ">
 
-                <p class="box mt-3 lead" style="color: coral;">🎁 禮物包裝與祝福小語</p>
-                <ul>
-                    <li>免費提供精美包裝，並可選擇附加手寫祝福卡。</li>
-                    <li>節慶期間推出主題包裝，如聖誕節、情人節限定款。</li>
-                </ul>
+                <h2 class="mt-2">✨ 最新消息</h2><br>
+                <!-- 環境責任區塊 -->
+                <div class="news-box">
+                    <!-- 顯示更多按鈕 -->
+                    <button class="show-more" id="showMoreButton">顯示更多</button>
+                    <div class="box news-box">
+                        <span>🌳 環境責任</span>
+                        <p>致力於減少碳足跡，推動綠色生產，並選擇可持續材料，保護地球環境。積極推廣垃圾分類和回收，努力成為零廢棄企業。</p>
+                    </div>
 
-                <p class="box mt-3 lead" style="color: coral;">🌻 季節限定禮品</p>
-                <ul>
-                    <li>每季推出特別商品組合，如春季花卉系列、冬季暖心禮盒等，為顧客帶來驚喜。</li>
-                </ul>
+                    <!-- 社會責任區塊 -->
+                    <div class="box news-box">
+                        <span>🤝 社會責任</span>
+                        <p>關注員工福祉，提供公平的職場機會與專業發展。支持當地社區發展，舉辦義工活動，並捐助需要幫助的人群。</p>
+                    </div>
 
-                <p class="box mt-3 lead" style="color: coral;">⚡ 快閃活動與工作坊</p>
-                <ul>
-                    <li>定期舉辦手工藝工作坊，如水晶球DIY、賀卡繪製，提升顧客參與感。</li>
-                    <li>與本地藝術家合作推出聯名商品，吸引藝文愛好者。</li>
-                </ul>
+                    <!-- 公司治理區塊 -->
+                    <div class="box news-box">
+                        <span>🔍 公司治理</span>
+                        <p>公司遵循透明的管理體系，保障股東與投資者的利益。加強內部監控，確保業務運營符合道德與法律規範。</p>
+                    </div>
+
+                    <!-- ESG 活動區塊 -->
+                    <div class="box news-box">
+                        <span>⚡ ESG 活動與倡議</span>
+                        <p>定期舉辦ESG主題工作坊，促進員工與社會大眾對可持續發展的關注。積極參與全球ESG合作，與國際組織共同推動社會責任。</p>
+                    </div>
+
+                    <!-- 碳中和區塊 -->
+                    <div class="box news-box">
+                        <span>♻️ 碳中和行動</span>
+                        <p>承諾實現碳中和目標，通過綠色能源和減排措施來減少碳排放，保護環境未來。</p>
+                    </div>
+
+                    <div id="extraContent" style="display:none;">
+                        <div class="box news-box">
+                            <span>🔋 可持續能源</span>
+                            <p>積極開發可再生能源技術，推動全球能源轉型，減少對傳統能源的依賴。</p>
+                        </div>
+                        <div class="box news-box">
+                            <span>🌍 全球影響</span>
+                            <p>與國際合作夥伴共同推動全球可持續發展目標，為社會創造更大的積極影響。</p>
+                        </div>
+                    </div>
+                </div>
             </div>
+
         </div>
     </div>
+
+    <script>
+        // 點擊顯示更多的功能
+        document.getElementById('showMoreButton').addEventListener('click', function () {
+            var extraContent = document.getElementById('extraContent');
+            if (extraContent.style.display === 'none') {
+                extraContent.style.display = 'block';
+                this.innerHTML = '顯示更少';
+            } else {
+                extraContent.style.display = 'none';
+                this.innerHTML = '顯示更多';
+            }
+        });
+
+        // 為每個 .box 添加點擊事件以顯示或隱藏內容
+        document.querySelectorAll('.box').forEach(function (box) {
+            box.addEventListener('click', function () {
+                this.classList.toggle('active');
+            });
+        });
+    </script>
+
+
 
     <br><br><br>
     <br class="featurette-divider mt-5 py-5" id="page1"><br>
@@ -614,6 +722,33 @@
             </div>
         </div>
     </div>
+
+
+    <div class="container-50 vh-self-50 text-center" style="margin-left: 12px; margin-right: 12px;">
+        <div class="row g-0">
+            <div class="col-2">
+                <img src="./images/trees.gif" alt="" style="width:100%" height="95%">
+            </div>
+            <div class="col-2">
+                <img src="./images/trees.gif" alt="" style="width:100%" height="95%">
+            </div>
+            <div class="col-2">
+                <img src="./images/trees.gif" alt="" style="width:100%" height="95%">
+            </div>
+            <div class="col-2">
+                <img src="./images/trees.gif" alt="" style="width:100%" height="95%">
+            </div>
+            <div class="col-2">
+                <img src="./images/trees.gif" alt="" style="width:100%" height="95%">
+            </div>
+            <div class="col-2">
+                <img src="./images/trees.gif" alt="" style="width:100%" height="95%">
+            </div>
+        </div>
+    </div>
+
+
+
 
     <div class="container mt-5" data-aos="fade-up" data-aos-delay="200">
         <div class="row">
@@ -824,18 +959,19 @@
     <hr class="featurette-divider" id="page2"><br>
 
     <div class="container px-4 py-5" id="custom-cards" onclick="playsound(1)" data-aos="fade-up" data-aos-delay="200">
-        <h3 class="pb-1 " style="color: lightcoral;">🌱 淨零排放</h2>
-            <h2 class="fw-bold">你一定要知道的碳知識</h2>
-            <p class="py-1 fw-bold">2025年碳費開徵，從關鍵字文字雲發現，網友最常搜尋碳相關詞彙，包括碳費vs.碳稅、碳足跡盤查vs.碳盤查、碳中和vs.淨零排放，一次釐清，破解你的碳焦慮。
+        <h3 class="pb-1 fw-bold " style="color: olivedrab">🌱 淨零排放</h2>
+            <h2 class="fw-bold" style="color: sienna;">你一定要知道的碳知識</h2>
+            <p class="py-1 fw-bold" style="color: grey;">
+                2025年碳費開徵，從關鍵字文字雲發現，網友最常搜尋碳相關詞彙，包括碳費vs.碳稅、碳足跡盤查vs.碳盤查、碳中和vs.淨零排放，一次釐清，破解你的碳焦慮。
             </p>
             <div>
-                <iframe width="100%" height="315" src="https://cdn.wordart.com/iframe/2wkcy74bc2n7"></iframe>
+                <iframe width="100%" height="350" src="https://cdn.wordart.com/iframe/2wkcy74bc2n7"></iframe>
             </div>
 
             <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-4">
-                <div class="col" style="text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);">
+                <div class="col" style="text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);">
                     <div class="card card-cover h-100 overflow-hidden text-bg-white rounded-4 shadow-lg img-hover"
-                        style="background-image: url('./images/esg.gif'); background-size: cover; background-position: center;">
+                        style="background-image: url('./images/16.jpg'); background-size: cover; background-position: center;">
                         <div class="d-flex flex-column h-100 p-5 pb-3 text-dark text-shadow-1">
                             <h3 class="mt-2 mb-4 lh-1 fw-bold">
                                 什麼是碳費？哪些人需要繳交碳費？
@@ -847,11 +983,11 @@
                     </div>
                 </div>
 
-                <div class="col" style="text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);">
+                <div class="col" style="text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);">
                     <div class="card card-cover h-100 overflow-hidden text-bg-white rounded-4 shadow-lg img-hover"
-                        style="background-image: url('./imgs/11.jpg'); background-size: cover; background-position: center;">
+                        style="background-color: rgba(60, 210, 210, 0.3); background-size: cover; background-position: center;">
                         <div class="d-flex flex-column h-100 p-5 pb-3 text-dark text-shadow-1">
-                            <h3 class="mt-2 mb-4 lh-1 fw-bold">
+                            <h3 class="mt-2 mb-4 lh-1 fw-bold" style="color: lightseagreen;">
                                 碳費與碳稅有何不同？
                             </h3>
                             <p>碳費、碳稅兩者都是以價制量，藉由「碳排放貼上價格標籤」，提供企業經濟誘因，達到實質減少溫室氣體排放的目標。台灣採用碳費制度，碳費由「環境部」徵收，以專款專用方式使用在環境保護行動上；而國際上如英國、日本、加拿大等國，則由財政單位徵收碳稅（Carbon
@@ -861,9 +997,9 @@
                     </div>
                 </div>
 
-                <div class="col" style="text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);">
+                <div class="col" style="text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);">
                     <div class="card card-cover h-100 overflow-hidden text-bg-white rounded-4 shadow-lg img-hover"
-                        style="background-image: url('./imgs/11.jpg'); background-size: cover; background-position: center;">
+                        style="background-image: url('./images/14.webp'); background-size: cover; background-position: center;">
                         <div class="d-flex flex-column h-100 p-5 pb-3 text-dark text-shadow-1">
                             <h3 class="mt-2 mb-4 lh-1 fw-bold">
                                 碳足跡盤查、碳盤查有何不同？
@@ -874,11 +1010,11 @@
                     </div>
                 </div>
 
-                <div class="col" style="text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);">
+                <div class="col" style="text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);">
                     <div class="card card-cover h-100 overflow-hidden text-bg-white rounded-4 shadow-lg img-hover"
-                        style="background-image: url('./imgs/11.jpg'); background-size: cover; background-position: center;">
+                        style="background-color: rgba(110, 150, 150, 0.3); background-size: cover; background-position: center;">
                         <div class="d-flex flex-column h-100 p-5 pb-3 text-dark text-shadow-1">
-                            <h3 class="mt-2 mb-4 lh-1 fw-bold">
+                            <h3 class="mt-2 mb-4 lh-1 fw-bold" style="color: gray">
                                 碳中和、淨零排放有什麼不同？
                             </h3>
                             <p>碳中和專注於控制驟增的二氧化碳（CO₂），卻忽略甲烷（CH₄）、氧化亞氮（N₂O）等暖化潛力更高的溫室氣體，取而代之的淨零排放（Net
@@ -888,9 +1024,9 @@
                     </div>
                 </div>
 
-                <div class="col" style="text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);">
+                <div class=" col" style="text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);">
                     <div class="card card-cover h-100 overflow-hidden text-bg-white rounded-4 shadow-lg img-hover"
-                        style="background-image: url('./imgs/11.jpg'); background-size: cover; background-position: center;">
+                        style="background-image: url('./images/15.gif'); background-size: cover; background-position: center;">
                         <div class="d-flex flex-column h-100 p-5 pb-3 text-dark text-shadow-1">
                             <h3 class="mt-2 mb-4 lh-1 fw-bold">
                                 台灣碳權交易現況是什麼？
@@ -902,11 +1038,11 @@
                     </div>
                 </div>
 
-                <div class="col" style="text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);">
+                <div class="col" style="text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);">
                     <div class="card card-cover h-100 overflow-hidden text-bg-white rounded-4 shadow-lg img-hover"
-                        style="background-image: url('./imgs/11.jpg'); background-size: cover; background-position: center;">
+                        style="background-color: rgba(50, 200, 150, 0.3); background-size: cover; background-position: center;">
                         <div class="d-flex flex-column h-100 p-5 pb-3 text-dark text-shadow-1">
-                            <h3 class="mt-2 mb-4 lh-1 fw-bold">
+                            <h3 class="mt-2 mb-4 lh-1 fw-bold" style="color: olivedrab;">
                                 台灣人均碳排放量多少？
                             </h3>
                             <p>根據2024年中華民國國家溫室氣體排放清冊報告，台灣2022年燃料燃燒二氧化碳排放量為257,958千公噸二氧化碳當量（不包括二氧化碳移除量），占總溫室氣體排放量90.20%。2022年平均一個人11.06公噸二氧化碳當量，相較於1990年人均排放量約5.41公噸二氧化碳當量，30年已增加兩倍以上。
@@ -919,7 +1055,7 @@
     </div>
 
     <br>
-    <hr class="featurette-divider" id="page3">
+    <hr class=" featurette-divider" id="page3">
 
 
     <div class="container my-5" data-aos="fade-up" data-aos-delay="100">
@@ -930,7 +1066,7 @@
             <svg class="bi mt-5 mb-3" width="48" height="48">
                 <use xlink:href="#check2-circle" />
             </svg> -->
-            <h1 class="text-body-emphasis">學習遊戲化，集點樂開花</h1>
+            <h1 class="fw-bold" style="color: sienna">【 學習有趣　挑戰無懼 】</h1>
             <main class="form-signin w-100 m-auto">
                 <form>
                     <!-- 點擊圖片觸發新視窗 -->
@@ -966,9 +1102,11 @@
     <div class="container mt-3 container-fluid py-5">
         <div class="row featurette">
             <div class="col-md-7">
-                <h2 class="featurette-heading fw-normal lh-1">First featurette heading. <span
-                        class="text-body-secondary">It’ll blow your mind.</span></h2>
-                <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting
+                <h2 class="featurette-heading fw-normal lh-1">First featurette heading.
+                    <span class="text-body-secondary">It’ll blow your mind.</span>
+                </h2>
+                <p class="lead">Some great placeholder content for the first featurette
+                    here. Imagine some exciting
                     prose
                     here.</p>
             </div>
@@ -996,7 +1134,8 @@
                             </svg>
                         </div>
                         <h3 class="fs-2 text-body-emphasis">Featured title</h3>
-                        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with
+                        <p>Paragraph of text beneath the heading to explain the heading.
+                            We'll add onto it with
                             another
                             sentence
                             and probably just keep going until we run out of words.</p>
@@ -1015,7 +1154,8 @@
                             </svg>
                         </div>
                         <h3 class="fs-2 text-body-emphasis">Featured title</h3>
-                        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with
+                        <p>Paragraph of text beneath the heading to explain the heading.
+                            We'll add onto it with
                             another
                             sentence
                             and probably just keep going until we run out of words.</p>
@@ -1034,7 +1174,8 @@
                             </svg>
                         </div>
                         <h3 class="fs-2 text-body-emphasis">Featured title</h3>
-                        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with
+                        <p>Paragraph of text beneath the heading to explain the heading.
+                            We'll add onto it with
                             another
                             sentence
                             and probably just keep going until we run out of words.</p>
@@ -1053,7 +1194,8 @@
                             </svg>
                         </div>
                         <h3 class="fs-2 text-body-emphasis">Featured title</h3>
-                        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with
+                        <p>Paragraph of text beneath the heading to explain the heading.
+                            We'll add onto it with
                             another
                             sentence
                             and probably just keep going until we run out of words.</p>
@@ -1070,7 +1212,13 @@
             <div class="col-md-6 order-md-1">
                 <p>1212</p>
 
-                <img src="./images/2050.jpg" alt="Bootstrap" width="100%" height="85%" style="cursor: pointer;">
+                <div class="carousel-item active">
+                    <a href="https://www.youtube.com/watch?v=_KoEb4LZPaU" title="淨零知多少—政策及相關法規"><img
+                            src="/images/2050.jpg" class="d-block w-100"> </a>
+                </div>
+
+
+
 
             </div>
         </div>
@@ -1102,8 +1250,10 @@
                     <thead>
                         <tr>
                             <th class="bg-danger text-center" style="width: 15%;">vid</th>
-                            <th class="bg-danger text-center" style="width: 40%;">圖片 pic</th>
-                            <th class="bg-danger text-center" style="width: 45%;">敘述 sesc</th>
+                            <th class="bg-danger text-center" style="width: 40%;">圖片 pic
+                            </th>
+                            <th class="bg-danger text-center" style="width: 45%;">敘述 sesc
+                            </th>
                         </tr>
                     </thead>
                     <tbody>
@@ -1404,7 +1554,8 @@
                             </a>
                         </li>
                         <li class="nav-item mb-2">
-                            <a href="#page0" class="nav-link p-0 text-body-secondary">💬 常見問與答</a>
+                            <a href="#page0" class="nav-link p-0 text-body-secondary">💬
+                                常見問與答</a>
                         </li>
                     </ul>
                 </div>
