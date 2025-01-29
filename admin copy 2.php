@@ -24,24 +24,6 @@ if(!isset($_SESSION['login'])){
 </head>
 
 <body>
-    <!-- Bootstrap Modal -->
-    <div class="modal fade" id="addTitleImageModal" tabindex="-1" aria-labelledby="addTitleImageModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <!-- Modal 標題區域 -->
-                    <h5 class="modal-title" id="addTitleImageModalLabel"></h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body" id="modalContent">
-                    <!-- 這裡會動態加載內容 -->
-                </div>
-            </div>
-        </div>
-    </div>
-
-
     <!-- <body style="margin: -12px;"> -->
     <div class="container-fluid">
         <!-- 標題區塊 -->
@@ -114,26 +96,4 @@ if(!isset($_SESSION['login'])){
 
             <!-- Bootstrap 5 JS -->
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-
-
-            <!-- JQ -->
-            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-            <script>
-            function loadModalContent(url) {
-                // 使用 AJAX 加載指定的 URL 內容並插入到 modal-body 中
-                $('#addTitleImageModal .modal-body').load(url, function(response, status, xhr) {
-                    if (status == "error") {
-                        console.log("Error loading content: " + xhr.status + " " + xhr.statusText);
-                    } else {
-                        // 加載標題內容
-                        var title = $('#addTitleImageModalLabel').text(); // 這會從 title.php 取得標題
-                        $('#addTitleImageModalLabel').text(title); // 將標題動態設置到 modal 標題部分
-                    }
-                });
-            }
-            </script>
-
-
-
 </body>

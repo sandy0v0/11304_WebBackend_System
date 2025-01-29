@@ -6,6 +6,11 @@ body {
 	margin: 0px;
 }
 
+#addTitleImageModal .modal-header {
+	border-bottom: none;
+}
+
+/* 
 #cover {
 	width: 100%;
 	height: 100%;
@@ -32,7 +37,8 @@ body {
 	bottom: 0px;
 	margin: auto;
 	overflow: auto;
-}
+} 
+*/
 
 #main {
 	width: 1024px;

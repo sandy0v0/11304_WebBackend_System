@@ -1,19 +1,24 @@
-<h3 class="cent">新增標題區圖片</h3>
-<hr>
+<!-- modal/title.php -->
+<h3 class="text-center" id="addTitleImageModalLabel">新增標題區圖片</h3>
+
 <form action="api/insert.php" method="post" enctype="multipart/form-data">
-    <table>
-        <tr>
-            <td>標題區圖片：</td>
-            <td><input type="file" name="img" id="img"></td>
-        </tr>
-        <tr>
-            <td>標題區替代文字</td>
-            <td><input type="text" name="text" id="text"></td>
-        </tr>
-    </table>
-    <div class="cent">
-    <input type="hidden" name="table" value="<?=$_GET['table'];?>">
-        <input type="submit" value="新增">
-        <input type="reset" value="重置">
+    <div class="container mt-4">
+        <div class="row mb-3">
+            <label for="img" class="col-sm-2 col-form-label">標題區圖片：</label>
+            <div class="col-sm-10">
+                <input type="file" class="form-control" name="img" id="img">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="text" class="col-sm-2 col-form-label">標題區替代文字：</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="text" id="text">
+            </div>
+        </div>
+        <div class="text-center">
+            <input type="hidden" name="table" value="<?=$_GET['table'];?>">
+            <button type="submit" class="btn btn-primary">新增</button>
+            <button type="reset" class="btn btn-secondary">重置</button>
+        </div>
     </div>
 </form>
