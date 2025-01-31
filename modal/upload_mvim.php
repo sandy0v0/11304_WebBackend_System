@@ -1,16 +1,18 @@
-<h3 class="cent">更新動畫圖片</h3>
-<hr>
+<h3 class="text-center" id="addTitleImageModalLabel">更新動畫圖片</h3>
+
 <form action="api/update.php" method="post" enctype="multipart/form-data">
-    <table>
-        <tr>
-            <td>動畫圖片：</td>
-            <td><input type="file" name="img" id="img"></td>
-        </tr>
-    </table>
-    <div class="cent">
-        <input type="hidden" name="id" value="<?=$_GET['id'];?>">
-        <input type="hidden" name="table" value="<?=$_GET['table'];?>">
-        <input type="submit" value="更新">
-        <input type="reset" value="重置">
+    <div class="container mt-4">
+        <div class="row mb-3">
+            <label for="img" class="col-sm-2 col-form-label">動畫圖片：</label>
+            <div class="col-sm-10">
+                <input type="file" class="form-control" name="img" id="img">
+            </div>
+        </div>
+        <div class="text-center">
+            <input type="hidden" name="id" value="<?=$_GET['id'];?>">
+            <input type="hidden" name="table" value="<?=$_GET['table'];?>">
+            <button type="submit" class="btn btn-success">更新</button>
+            <button type="reset" class="btn btn-danger">重置</button>
+        </div>
     </div>
 </form>

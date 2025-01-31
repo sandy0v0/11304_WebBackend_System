@@ -4,11 +4,13 @@
     <?php include_once "logout.php";?>
 
     <div style="width:99%; height:95%; margin:auto; overflow:auto; border:#00 1px solid;">
-        <h2 class="t cent botli" style="color: rgb(52 85 48); margin-bottom: 20px;"><strong>網站標題管理</strong></h2>
+        <h2 class="t cent botli" style="color: rgb(52 85 48); margin-bottom: 20px;">
+            <strong>網站標題管理</strong>
+        </h2>
         <form method="post" action="./api/edit.php">
             <table width="80%">
                 <tbody>
-                    <tr class="yel" style="text-align: center; ">
+                    <tr class="yel" style="text-align: center;">
                         <td width="25%">網站標題</td>
                         <td width="25%">替代文字</td>
                         <td width="10%">顯示</td>
@@ -53,7 +55,6 @@
                             <input class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addTitleImageModal"
                                 value="新增網站標題圖片" onclick="loadModalContent('./modal/<?=$do;?>.php?table=<?=$do;?>')">
                         </td>
-
                         <td class="cent">
                             <input type="hidden" name="table" value="<?=$do;?>">
                             <input type="submit" value="修改確定" class="btn btn-warning">

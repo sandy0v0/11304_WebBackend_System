@@ -4,7 +4,9 @@
     <?php include_once "logout.php";?>
 
     <div style="width:99%; height:95%; margin:auto; overflow:auto; border:#00 1px solid;">
-        <h2 class="t cent botli" style="color: rgb(52 85 48); margin-bottom: 20px;"><strong>動態文字廣告管理</strong></h2>
+        <h2 class="t cent botli" style="color: rgb(52 85 48); margin-bottom: 20px;">
+            <strong>動態文字廣告管理</strong>
+        </h2>
         <form method="post" action="./api/edit.php">
             <table width="80%">
                 <tbody>
