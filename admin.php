@@ -109,11 +109,7 @@ if(!isset($_SESSION['login'])){
             }
         ?>
             </div>
-            <!-- <div class="card mt-3">
-                <div class="card-body text-center">
-                    <h5>進站總人數 : <?= $Total->find(1)['total']; ?></h5>
-                </div>
-            </div> -->
+
             <footer class=" card-body text-light text-center py-3 mt-3"
                 style="background-color: rgba(60, 210, 210, 0.8); font-size: 18px;">
                 <p style="margin-top:1rem">進站總人數 : <?= $Total->find(1)['total']; ?></p>
