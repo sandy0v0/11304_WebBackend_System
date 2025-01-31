@@ -18,7 +18,7 @@
         <div class="text-center">
             <input type="hidden" name="table" value="<?=$_GET['table'];?>">
             <button type="submit" class="btn btn-primary">新增</button>
-            <button type="reset" class="btn btn-secondary">重置</button>
+            <button type="reset" class="btn btn-danger">重置</button>
         </div>
     </div>
 </form>

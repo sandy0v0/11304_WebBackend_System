@@ -27,7 +27,7 @@ if(!isset($_SESSION['login'])){
     <!-- Bootstrap Modal -->
     <div class="modal fade" id="addTitleImageModal" tabindex="-1" aria-labelledby="addTitleImageModalLabel"
         aria-hidden="true">
-        <div class="modal-dialog modal-lg">
+        <div class="modal-dialog modal-xl">
             <div class="modal-content">
                 <div class="modal-header">
                     <!-- Modal 標題區域 -->
@@ -49,7 +49,7 @@ if(!isset($_SESSION['login'])){
     </div>
 
     <div id="main" class="container-fluid">
-        <div class="row mb-3" style="margin: -24px -24px 0px -24px;">
+        <div class="row" style="margin: -24px -24px 0px -24px;">
             <div class=" col-12 text-center">
                 <a href="index.php" title="<?= $Title->find(['sh' => 1])['text']; ?>">
                     <img src="./upload/<?= $Title->find(['sh' => 1])['img']; ?>"
@@ -59,10 +59,10 @@ if(!isset($_SESSION['login'])){
         </div>
 
         <div class="row">
-            <nav class="navbar navbar-expand-lg sticky-top" style="margin-top: -17px; background-color: rgba(60, 210, 210, 0.8);
+            <nav class="navbar navbar-expand-lg sticky-top" style="margin-top: -80px; background-color: rgba(60, 210, 210, 0.8);
             text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3); ">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="index.php" style="color: rgb(52 85 48);">
+                    <a class="navbar-brand" href="?do=admin" style="color: rgb(52 85 48);">
                         <!-- 可以在前面加上圖示 -->
                         <img src="./images/left01.png" alt="Sustaina Life" width="45" height="45"
                             onclick="playsound(1)">
@@ -72,21 +72,26 @@ if(!isset($_SESSION['login'])){
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="collapse navbar-collapse" id="navbarNav"
+                        style="--bs-navbar-color: floralwhite; font-size: 18px;">
                         <ul class="navbar-nav mx-auto">
-                            <li class="nav-item"><a class="nav-link" href="?do=title">網站標題管理</a></li>
-                            <li class="nav-item"><a class="nav-link" href="?do=ad">動態文字廣告管理</a></li>
-                            <li class="nav-item"><a class="nav-link" href="?do=mvim">動畫圖片管理</a></li>
-                            <li class="nav-item"><a class="nav-link" href="?do=image">校園映象資料管理</a></li>
-                            <li class="nav-item"><a class="nav-link" href="?do=total">進站總人數管理</a></li>
-                            <li class="nav-item"><a class="nav-link" href="?do=bottom">頁尾版權資料管理</a></li>
-                            <li class="nav-item"><a class="nav-link" href="?do=news">最新消息資料管理</a></li>
-                            <li class="nav-item"><a class="nav-link" href="?do=admin">管理者帳號管理</a></li>
-                            <li class="nav-item"><a class="nav-link" href="?do=menu">選單管理</a></li>
+                            <li class="nav-item"><a class="nav-link" href="?do=title">◆ 網站標題管理</a></li>
+                            <li class="nav-item"><a class="nav-link" href="?do=ad">◆ 動態文字廣告管理</a></li>
+                            <li class="nav-item"><a class="nav-link" href="?do=mvim">◆ 動畫圖片管理</a></li>
+                            <li class="nav-item"><a class="nav-link" href="?do=image">◆ 校園映象資料管理</a></li>
+                            <li class="nav-item"><a class="nav-link" href="?do=total">◆ 進站總人數管理</a></li>
+                            <li class="nav-item"><a class="nav-link" href="?do=bottom">◆ 頁尾版權資料管理</a></li>
+                            <li class="nav-item"><a class="nav-link" href="?do=news">◆ 最新消息資料管理</a></li>
+                            <li class="nav-item"><a class="nav-link" href="?do=admin">◆ 管理者帳號管理</a></li>
+                            <li class="nav-item"><a class="nav-link" href="?do=menu">◆ 選單管理</a></li>
                         </ul>
                         <div class="d-flex align-items-center" style="margin-right:12px;">
-                            <a class=" btn btn-outline-light ms-1" href="logout.php">管理登出</a>
+                            <a class="btn btn-outline-light ms-1" href="javascript:void(0);"
+                                onclick="document.cookie='user=;'; location.replace('./api/logout.php');">
+                                管理登出
+                            </a>
                         </div>
+
                     </div>
                 </div>
             </nav>
@@ -104,13 +109,14 @@ if(!isset($_SESSION['login'])){
             }
         ?>
             </div>
-            <div class="card mt-3">
+            <!-- <div class="card mt-3">
                 <div class="card-body text-center">
                     <h5>進站總人數 : <?= $Total->find(1)['total']; ?></h5>
                 </div>
-            </div>
-            <footer class="bg-dark text-light text-center py-3 mt-3">
-
+            </div> -->
+            <footer class=" card-body text-light text-center py-3 mt-3"
+                style="background-color: rgba(60, 210, 210, 0.8); font-size: 18px;">
+                <p style="margin-top:1rem">進站總人數 : <?= $Total->find(1)['total']; ?></p>
                 <p><?=$Bottom->find(1)['bottom'];?></p>
             </footer>
 
