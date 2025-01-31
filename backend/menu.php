@@ -23,21 +23,21 @@
                     ?>
                     <tr>
                         <td>
-                            <input type="text" name="text[]" value="<?=$row['text'];?>">    
+                            <input type="text" name="text[]" value="<?=$row['text'];?>">
                         </td>
                         <td>
                             <input type="text" name="href[]" value="<?=$row['href'];?>">
                         </td>
                         <td><?=$Menu->count(['main_id'=>$row['id']]);?></td>
                         <td>
-                            <input type="checkbox" name="sh[]" value="<?=$row['id'];?>" <?=($row['sh']==1)?'checked':'';?>>
+                            <input type="checkbox" name="sh[]" value="<?=$row['id'];?>"
+                                <?=($row['sh']==1)?'checked':'';?>>
                         </td>
                         <td>
                             <input type="checkbox" name="del[]" value="<?=$row['id'];?>">
                         </td>
                         <td>
-                            <input type="button"
-                                  value="編輯次選單"
+                            <input type="button" value="編輯次選單"
                                 onclick="op(&#39;#cover&#39;,&#39;#cvr&#39;,&#39;./modal/submenu.php?id=<?=$row['id'];?>&#39;)">
                         </td>
                         <input type="hidden" name="id[]" value="<?=$row['id'];?>">
@@ -56,7 +56,8 @@
                         <td width="200px">
                             <input type="button"
                                 onclick="op(&#39;#cover&#39;,&#39;#cvr&#39;,&#39;./modal/<?=$do;?>.php?table=<?=$do;?>&#39;)"
-                                value="新增主選單"></td>
+                                value="新增主選單">
+                        </td>
                         <td class="cent">
                             <input type="hidden" name="table" value="<?=$do;?>">
                             <input type="submit" value="修改確定">

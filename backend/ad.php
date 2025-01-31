@@ -1,4 +1,4 @@
-<div class="di" style="height:450px; border:#00 1px solid; width:100%; margin:2px 2px 0px 2px; float:left; position:relative;text-align-last: center;
+<div class="di" style="height:540px; border:#00 1px solid; width:100%; margin:2px 2px 0px 2px; float:left; position:relative;text-align-last: center;
     text-align: -webkit-center;">
     <!--正中央-->
     <?php include_once "logout.php";?>
@@ -22,7 +22,7 @@
                     <tr>
                         <td>
                             <input type="text" name="text[]" value="<?=$row['text'];?>"
-                                style="width:97%;height:45px;text-align-last: auto;}">
+                                style="width:97%;height:45px;text-align-last: auto;">
                         </td>
                         <td>
                             <input type="checkbox" name="sh[]" value="<?=$row['id'];?>"
@@ -39,7 +39,6 @@
                 </tbody>
             </table>
 
-            <!-- [#39;] 代表['] -->
             <table style="margin-top:30px; width: 80%;">
                 <tbody>
                     <tr>

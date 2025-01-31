@@ -49,16 +49,17 @@ if(!isset($_SESSION['login'])){
     </div>
 
     <div id="main" class="container-fluid">
-        <div class="row" style="margin: -24px -24px 0px -24px;">
+        <div class="row" style="margin: -24px -12px 0px -12px;">
             <div class=" col-12 text-center">
                 <a href="index.php" title="<?= $Title->find(['sh' => 1])['text']; ?>">
                     <img src="./upload/<?= $Title->find(['sh' => 1])['img']; ?>"
-                        alt="<?= $Title->find(['sh' => 1])['text']; ?>" class="img-fluid" style="min-width: 100%;">
+                        alt="<?= $Title->find(['sh' => 1])['text']; ?>" class="img-fluid"
+                        style="min-width: 100%;max-height: 230px; object-fit: cover;object-position: 50% 10%;">
                 </a>
             </div>
         </div>
 
-        <div class="row">
+        <div class="row" style="margin: 0px 0px 0px 0px;">
             <nav class="navbar navbar-expand-lg sticky-top" style="margin-top: -80px; background-color: rgba(60, 210, 210, 0.8);
             text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3); ">
                 <div class="container-fluid">
@@ -110,7 +111,7 @@ if(!isset($_SESSION['login'])){
         ?>
             </div>
 
-            <footer class=" card-body text-light text-center py-3 mt-3"
+            <footer class=" card-body text-light text-center py-1 mt-1"
                 style="background-color: rgba(60, 210, 210, 0.8); font-size: 18px;">
                 <p style="margin-top:1rem">進站總人數 : <?= $Total->find(1)['total']; ?></p>
                 <p><?=$Bottom->find(1)['bottom'];?></p>

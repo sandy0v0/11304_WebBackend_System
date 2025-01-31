@@ -1,4 +1,4 @@
-<div class="di" style="height:450px; border:#00 1px solid; width:100%; margin:2px 2px 0px 2px; float:left; position:relative;text-align-last: center;
+<div class="di" style="height:540px; border:#00 1px solid; width:100%; margin:2px 2px 0px 2px; float:left; position:relative;text-align-last: center;
     text-align: -webkit-center;">
     <!--正中央-->
     <?php include_once "logout.php";?>

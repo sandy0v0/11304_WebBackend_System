@@ -1,8 +1,8 @@
-<div class="di" style="height:450px; border:#00 1px solid; width:100%; margin:2px 2px 0px 2px; float:left; position:relative;text-align-last: center;
+<div class="di" style="height:540px; border:#00 1px solid; width:100%; margin:2px 2px 0px 2px; float:left; position:relative;text-align-last: center;
     text-align: -webkit-center;">
     <!--正中央-->
     <?php include_once "logout.php";?>
-    <!-- style="text-align-last: right;" -->
+
     <div style="width:99%; height:95%; margin:auto; overflow:auto; border:#00 1px solid;">
         <h2 class="t cent botli" style="color: rgb(52 85 48); margin-bottom: 35px;">
             <strong>進站總人數管理</strong>
@@ -22,7 +22,6 @@
                 </tbody>
             </table>
 
-            <!-- [#39;] 代表['] -->
             <table style="margin-top:40px; width:70%;">
                 <tbody>
                     <tr>
