@@ -21,11 +21,12 @@
             <div id="cvr" style="position:absolute; width:99%; height:100%; margin:auto; z-index:9898;"></div>
         </div>
     </div>
-    
+
     <div id="main">
         <!-- 在A標籤裡面,標準的替代文字,應該是alt,當你圖片發生問題的時候所出現的文字 -->
         <a title="<?=$Title->find(['sh'=>1])['text'];?>" href="index.php">
-            <div class="ti" style="background:url('./upload/<?=$Title->find(['sh'=>1])['img'];?>'); background-size:cover;"></div>
+            <div class="ti"
+                style="background:url('./upload/<?=$Title->find(['sh'=>1])['img'];?>'); background-size:cover;"></div>
             <!--標題-->
         </a>
         <div id="ms">
@@ -60,7 +61,7 @@
                 </div>
                 <div class="dbor" style="margin:3px; width:95%; height:20%; line-height:100px;">
                     <span class="t">進站總人數 :
-                    <?=$Total->find(1)['total'];?></span>
+                        <?=$Total->find(1)['total'];?></span>
                 </div>
             </div>
             <?php
@@ -102,31 +103,31 @@
                     ?>
                 <div style="width:89%; height:480px;" class="dbor">
                     <span class="t botli">校園映象區</span>
-                <div class='cent' id="up" onclick="pp(1)" style="margin-top:20px;">
-                    <img src="./icon/up.jpg" alt="">
-                </div>
-            
-                <div class='cent' style="margin-top:10px;">
-                <?php 
+                    <div class='cent' id="up" onclick="pp(1)" style="margin-top:8px;">
+                        <img src="./icon/up.jpg" alt="">
+                    </div>
+
+                    <div class='cent' style="margin-top:5px;">
+                        <?php 
                     $imgs=$Image->all(['sh'=>1]);
                     foreach($imgs as $idx => $img){
                         echo "<div class='im' id='ssaa{$idx}'>";
-                        echo "<img src='./upload/{$img['img']}' style='width:150px;height:103px;border:3px solid orange'>";
+                        echo "<img src='./upload/{$img['img']}' style='width:180px;height:120px;border:3px solid orange'>";
                         echo "</div>";
                     }
                 ?>
-                </div>
+                    </div>
 
-                <div class='cent' id="dn" onclick="pp(2)" style="margin-top:10px;">
-                    <img src="./icon/dn.jpg" alt="">
-                </div>
+                    <div class='cent' id="dn" onclick="pp(2)" style="margin-top:8px;">
+                        <img src="./icon/dn.jpg" alt="">
+                    </div>
 
 
                     <script>
                     var nowpage = 0,
                         num = <?=$Image->count(['sh'=>1]);?>;
 
-                        function pp(x) {
+                    function pp(x) {
                         var s, t;
                         // 代表頁數不少於1時，執行nowpage--
                         // nowpage最小為0
@@ -136,8 +137,8 @@
                         // 判斷你還可以點幾下
                         // 原本的有錯，要改成如下
                         if (x == 2 && (nowpage + 1) <= num * 1 - 3) {
-                        
-                        // (原本的錯誤) if (x == 2 && (nowpage + 1) * 3 <= num * 1 + 3) {
+
+                            // (原本的錯誤) if (x == 2 && (nowpage + 1) * 3 <= num * 1 + 3) {
                             nowpage++;
                         }
                         // 用選擇器class=im，此迴圈會跑3次

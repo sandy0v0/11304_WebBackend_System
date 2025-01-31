@@ -46,12 +46,12 @@
             <table style="margin-top:30px; width: 80%;">
                 <tbody>
                     <tr>
-                        <td width="30%">
+                        <td width="33%">
                             <!-- 觸發 Modal 的按鈕 -->
                             <input class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addTitleImageModal"
                                 value="新增網站標題圖片" onclick="loadModalContent('./modal/<?=$do;?>.php?table=<?=$do;?>')">
                         </td>
-                        <td class="cent">
+                        <td class="cent" width="42%">
                             <input type="hidden" name="table" value="<?=$do;?>">
                             <input type="submit" value="修改確定" class="btn btn-warning">
                             <input type="reset" value="　重置　" class="btn btn-danger">
