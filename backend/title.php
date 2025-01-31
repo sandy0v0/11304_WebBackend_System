@@ -1,5 +1,5 @@
-<div class="di"
-    style="height:540px; border:#999 1px solid; width:76.5%; margin:2px 0px 0px 0px; float:left; position:relative; left:20px;">
+<div class="di" style="height:600px; border:#999 1px solid; width:100%; margin:2px 2px 0px 2px; float:left; position:relative;text-align-last: center;
+    text-align: -webkit-center;">
     <!--正中央-->
     <?php include_once "logout.php";?>
 
@@ -8,23 +8,24 @@
         <form method="post" action="./api/edit.php">
             <table width="100%">
                 <tbody>
-                    <tr class="yel">
-                        <td width="45%">網站標題</td>
-                        <td width="23%">替代文字</td>
-                        <td width="7%">顯示</td>
-                        <td width="7%">刪除</td>
+                    <tr class="yel" style="text-align: center; ">
+                        <td width="25%">網站標題</td>
+                        <td width="25%">替代文字</td>
+                        <td width="10%">顯示</td>
+                        <td width="10%">刪除</td>
                         <td></td>
                     </tr>
                     <?php
                     $rows=$Title->all();
                     foreach($rows as $row){
                     ?>
-                    <tr>
+                    <tr style="text-align: center;">
                         <td>
-                            <img src="./upload/<?=$row['img'];?>" style="width:300px;height:30px;">
+                            <img src="./upload/<?=$row['img'];?>" style="width:380px;height:40px;">
                         </td>
                         <td>
-                            <input type="text" name="text[]" value="<?=$row['text'];?>">
+                            <input type=" text" name="text[]" value="<?=$row['text'];?>"
+                                style="width:380px;height:40px;">
                         </td>
                         <td>
                             <input type="radio" name="sh" value="<?=$row['id'];?>" <?=($row['sh']==1)?'checked':'';?>>
@@ -44,10 +45,10 @@
                     ?>
                 </tbody>
             </table>
-            <table style="margin-top:40px; width:70%;">
+            <table style="margin-top:40px; width:90%;">
                 <tbody>
                     <tr>
-                        <td width="200px">
+                        <td width="250px">
                             <!-- 觸發 Modal 的按鈕 -->
                             <input class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addTitleImageModal"
                                 value="新增網站標題圖片" onclick="loadModalContent('./modal/<?=$do;?>.php?table=<?=$do;?>')">

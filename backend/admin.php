@@ -1,5 +1,5 @@
-<div class="di"
-    style="height:540px; border:#999 1px solid; width:76.5%; margin:2px 0px 0px 0px; float:left; position:relative; left:20px;">
+<div class="di" style="height:540px; border:#999 1px solid; width:76.5%; margin:2px 0px 0px 0px; float:left; position:relative; left:20px; text-align-last: center;
+    text-align: -webkit-center;">
     <!--正中央-->
     <?php include_once "logout.php";?>
 
@@ -8,7 +8,7 @@
         <form method="post" action="./api/edit.php">
             <table width="100%">
                 <tbody>
-                    <tr class="yel">                      
+                    <tr class="yel">
                         <td width="45%">帳號</td>
                         <td width="45%">密碼</td>
                         <td width="10%">刪除</td>
@@ -18,16 +18,16 @@
                     foreach($rows as $row){           
                         // if($row['acc']!='admin'){   如果你想判斷如果使用者不是admin就不讓它進來    
                     ?>
-                    <tr>                       
+                    <tr>
                         <td>
-                            <input type="text" name="acc[]"  value="<?=$row['acc'];?>">
+                            <input type="text" name="acc[]" value="<?=$row['acc'];?>">
                         </td>
                         <td>
-                            <input type="password" name="pw[]" value="<?=$row['pw'];?>" >    
+                            <input type="password" name="pw[]" value="<?=$row['pw'];?>">
                         </td>
                         <td>
-                            <input type="checkbox" name="del[]" value="<?=$row['id'];?>">    
-                        </td>                    
+                            <input type="checkbox" name="del[]" value="<?=$row['id'];?>">
+                        </td>
                         <input type="hidden" name="id[]" value="<?=$row['id'];?>">
                     </tr>
                     <?php

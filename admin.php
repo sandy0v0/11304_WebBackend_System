@@ -12,7 +12,7 @@ if(!isset($_SESSION['login'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>卓越科技大學校園資訊系統</title>
+    <title>永續生活 Sustaina Life 系統 - 後台管理</title>
     <!-- 引入 Bootstrap 5 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
         integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
@@ -41,30 +41,32 @@ if(!isset($_SESSION['login'])){
         </div>
     </div>
 
+    <div id="cover" style="display:none;">
+        <div id="coverr">
+            <a style="position:absolute; right:3px; top:4px; cursor:pointer; z-index:9999;" onclick="cl('#cover')">X</a>
+            <div id="cvr" style="position:absolute; width:99%; height:100%; margin:auto; z-index:9898;"></div>
+        </div>
+    </div>
 
-    <!-- <body style="margin: -12px;"> -->
-    <div class="container-fluid">
-        <!-- 標題區塊 -->
-        <div class="row mb-3" style="margin:-12px;">
-            <div class=" col-12 text-center" style="display: block;">
-                <a href="index.php">
-                    <div class="ti"
-                        style="background:url('./upload/<?=$Title->find(['sh'=>1])['img'];?>'); background-size:cover; height:200px;margin-right:-12px;margin-left:-12px;">
-                    </div>
+    <div id="main" class="container-fluid">
+        <div class="row mb-3" style="margin: -24px -24px 0px -24px;">
+            <div class=" col-12 text-center">
+                <a href="index.php" title="<?= $Title->find(['sh' => 1])['text']; ?>">
+                    <img src="./upload/<?= $Title->find(['sh' => 1])['img']; ?>"
+                        alt="<?= $Title->find(['sh' => 1])['text']; ?>" class="img-fluid" style="min-width: 100%;">
                 </a>
             </div>
         </div>
 
-        <!-- <div class="row" style="margin-right:12px;margin-left:12px;"> -->
         <div class="row">
             <nav class="navbar navbar-expand-lg sticky-top" style="margin-top: -17px; background-color: rgba(60, 210, 210, 0.8);
-            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3); ">
+            text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3); ">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="index.php">
+                    <a class="navbar-brand" href="index.php" style="color: rgb(52 85 48);">
                         <!-- 可以在前面加上圖示 -->
                         <img src="./images/left01.png" alt="Sustaina Life" width="45" height="45"
                             onclick="playsound(1)">
-                        <img src="./images/left.gif" alt="永續生活 Sustaina Life">
+                        <img src="./images/left.gif" alt="永續生活 Sustaina Life">&nbsp;<strong>後台</strong>
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -83,13 +85,13 @@ if(!isset($_SESSION['login'])){
                             <li class="nav-item"><a class="nav-link" href="?do=menu">選單管理</a></li>
                         </ul>
                         <div class="d-flex align-items-center" style="margin-right:12px;">
-                            <a class=" btn btn-outline-light ms-3" href="logout.php">登出</a>
+                            <a class=" btn btn-outline-light ms-1" href="logout.php">管理登出</a>
                         </div>
                     </div>
                 </div>
             </nav>
 
-            <div class="container mt-5">
+            <div class="container mt-3">
                 <!-- 管理區域 -->
                 <?php
             $do = $_GET['do'] ?? 'title';
@@ -107,7 +109,7 @@ if(!isset($_SESSION['login'])){
                     <h5>進站總人數 : <?= $Total->find(1)['total']; ?></h5>
                 </div>
             </div>
-            <footer class="bg-dark text-light text-center py-3 mt-5">
+            <footer class="bg-dark text-light text-center py-3 mt-3">
 
                 <p><?=$Bottom->find(1)['bottom'];?></p>
             </footer>
