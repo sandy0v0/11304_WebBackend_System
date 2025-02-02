@@ -17,6 +17,12 @@ if(isset($_POST['id'])){
                     $row['sh']=(isset($_POST['sh']) && $_POST['sh']==$id)?1:0;
                     $row['text']=$_POST['text'][$idx];
                     
+                break;
+                case "mvim2":
+                 
+                    $row['sh']=(isset($_POST['sh']) && $_POST['sh']==$id)?1:0;
+                    $row['text']=$_POST['text'][$idx];
+                    
                     break;
                 case "admin":
                     $row['acc']=$_POST['acc'][$idx];

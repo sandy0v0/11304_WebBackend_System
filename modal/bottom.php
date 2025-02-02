@@ -11,7 +11,7 @@
         </tr>
     </table>
     <div class="cent">
-    <input type="hidden" name="table" value="bottom">
+        <input type="hidden" name="table" value="bottom">
         <input type="submit" value="修改確定">
         <input type="reset" value="重置">
     </div>

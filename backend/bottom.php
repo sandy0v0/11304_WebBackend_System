@@ -16,7 +16,7 @@
                         </label>
                         <label for="text" class="col-sm-1.5">
                             <input type="text" name="bottom" value="<?=$Bottom->find(1)['bottom'];?>"
-                                style="width:230px;height:36px; text-align-last:auto; text-align-last: left;">
+                                style="width:380px;height:36px; text-align-last:auto; text-align-last: left;">
                         </label>
                     </tr>
                 </tbody>

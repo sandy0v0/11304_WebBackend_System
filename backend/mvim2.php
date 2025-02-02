@@ -5,7 +5,7 @@
 
     <div style="width:99%; height:95%; margin:auto; overflow:auto; border:#00 1px solid;">
         <h2 class="t cent botli" style="color: rgb(52 85 48); margin-bottom: 20px;">
-            <strong>動畫圖片管理</strong>
+            <strong>動圖管理</strong>
         </h2>
         <form method="post" action="./api/edit.php">
             <table width="80%">
@@ -17,7 +17,7 @@
                         <td></td>
                     </tr>
                     <?php
-                    $rows=$Mvim->all();
+                    $rows=$Mvim2->all();
                     foreach($rows as $row){
                     ?>
                     <tr>
@@ -25,8 +25,7 @@
                             <img src="./upload/<?=$row['img'];?>" style="width:280px;height:200px;">
                         </td>
                         <td>
-                            <input type="checkbox" name="sh[]" value="<?=$row['id'];?>"
-                                <?=($row['sh']==1)?'checked':'';?>>
+                            <input type="radio" name="sh" value="<?=$row['id'];?>" <?=($row['sh']==1)?'checked':'';?>>
                         </td>
                         <td>
                             <input type="checkbox" name="del[]" value="<?=$row['id'];?>">

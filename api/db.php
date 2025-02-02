@@ -182,6 +182,7 @@ $Admin=new DB('admins');
 $Menu=new DB('menus');
 $Total=new DB('total');
 $Bottom=new DB('bottom');
+$Mvim2=new DB('mvims2');
 
 
 if(!isset($_SESSION['view'])){

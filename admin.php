@@ -51,7 +51,7 @@ if(!isset($_SESSION['login'])){
     <div id="main" class="container-fluid">
         <div class="row" style="margin: -24px -12px 0px -12px;">
             <div class=" col-12 text-center">
-                <a href="index.php" title="<?= $Title->find(['sh' => 1])['text']; ?>">
+                <a href="WebBackend_System.php" title="<?= $Title->find(['sh' => 1])['text']; ?>">
                     <img src="./upload/<?= $Title->find(['sh' => 1])['img']; ?>"
                         alt="<?= $Title->find(['sh' => 1])['text']; ?>" class="img-fluid"
                         style="min-width: 100%;max-height: 230px; object-fit: cover;object-position: 50% 10%;">
@@ -65,8 +65,7 @@ if(!isset($_SESSION['login'])){
                 <div class="container-fluid">
                     <a class="navbar-brand" href="?do=admin" style="color: rgb(52 85 48);">
                         <!-- 可以在前面加上圖示 -->
-                        <img src="./images/left01.png" alt="Sustaina Life" width="45" height="45"
-                            onclick="playsound(1)">
+                        <img src="./images/left01.png" alt="Sustaina Life" width="45" height="45" onclick="">
                         <img src="./images/left.gif" alt="永續生活 Sustaina Life">&nbsp;<strong>後台</strong>
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -74,11 +73,12 @@ if(!isset($_SESSION['login'])){
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav"
-                        style="--bs-navbar-color: floralwhite; font-size: 18px;">
+                        style="--bs-navbar-color: floralwhite; font-size: 16px;">
                         <ul class="navbar-nav mx-auto">
                             <li class="nav-item"><a class="nav-link" href="?do=title">◆ 網站標題管理</a></li>
                             <li class="nav-item"><a class="nav-link" href="?do=ad">◆ 動態文字廣告管理</a></li>
                             <li class="nav-item"><a class="nav-link" href="?do=mvim">◆ 動畫圖片管理</a></li>
+                            <li class="nav-item"><a class="nav-link" href="?do=mvim2">◆ 動圖管理</a></li>
                             <li class="nav-item"><a class="nav-link" href="?do=image">◆ 校園映象資料管理</a></li>
                             <li class="nav-item"><a class="nav-link" href="?do=total">◆ 進站總人數管理</a></li>
                             <li class="nav-item"><a class="nav-link" href="?do=bottom">◆ 頁尾版權資料管理</a></li>
