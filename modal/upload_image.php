@@ -1,9 +1,9 @@
-<h3 class="text-center" id="addTitleImageModalLabel">更新校園映像圖片</h3>
+<h3 class="text-center" id="addTitleImageModalLabel">更新永續映像圖片</h3>
 
 <form action="api/update.php" method="post" enctype="multipart/form-data">
     <div class="container mt-4">
         <div class="row mb-3">
-            <label for="img" class="col-sm-2 col-form-label">校園映像圖片：</label>
+            <label for="img" class="col-sm-2 col-form-label">永續映像圖片：</label>
             <div class="col-sm-10">
                 <input type="file" class="form-control" name="img" id="img">
             </div>

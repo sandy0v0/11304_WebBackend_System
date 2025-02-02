@@ -79,7 +79,7 @@ if(!isset($_SESSION['login'])){
                             <li class="nav-item"><a class="nav-link" href="?do=ad">◆ 動態文字廣告管理</a></li>
                             <li class="nav-item"><a class="nav-link" href="?do=mvim">◆ 動畫圖片管理</a></li>
                             <li class="nav-item"><a class="nav-link" href="?do=mvim2">◆ 動圖管理</a></li>
-                            <li class="nav-item"><a class="nav-link" href="?do=image">◆ 校園映象資料管理</a></li>
+                            <li class="nav-item"><a class="nav-link" href="?do=image">◆ 永續映象資料管理</a></li>
                             <li class="nav-item"><a class="nav-link" href="?do=total">◆ 進站總人數管理</a></li>
                             <li class="nav-item"><a class="nav-link" href="?do=bottom">◆ 頁尾版權資料管理</a></li>
                             <li class="nav-item"><a class="nav-link" href="?do=news">◆ 最新消息資料管理</a></li>

@@ -5,7 +5,7 @@
 
     <div style="width:99%; height:95%; margin:auto; overflow:auto; border:#00 1px solid;">
         <h2 class="t cent botli" style="color: rgb(52 85 48); margin-bottom: 20px;">
-            <strong>校園映像資料管理</strong>
+            <strong>永續映像資料管理</strong>
         </h2>
         <form method="post" action="./api/edit.php">
             <table width="80%">
@@ -82,7 +82,7 @@
                         <td width="33%">
                             <!-- 觸發 Modal 的按鈕 -->
                             <input class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addTitleImageModal"
-                                value="新增校園映像圖片" onclick="loadModalContent('./modal/<?=$do;?>.php?table=<?=$do;?>')">
+                                value="新增永續映像圖片" onclick="loadModalContent('./modal/<?=$do;?>.php?table=<?=$do;?>')">
                         </td>
                         <td class="cent" width="42%">
                             <input type="hidden" name="table" value="<?=$do;?>">
