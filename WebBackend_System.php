@@ -101,7 +101,8 @@
     .marquee span {
         display: inline-block;
         padding-left: 100%;
-        animation: marquee 20s linear infinite;
+        animation: marquee 30s linear infinite;
+        animation-delay: 0s; /* 讓動畫立刻開始 */
     }
 
     @keyframes marquee {
@@ -539,17 +540,17 @@
                             <input type="text" class="form-control" id="acc" name="acc" required autofocus>
                         </div>
                         <div class="mb-3">
-                            <label for="ps" class="form-label">密碼</label>
-                            <input type="password" class="form-control" id="ps" name="ps" required>
+                            <label for="pw" class="form-label">密碼</label>
+                            <input type="password" class="form-control" id="pw" name="pw" required>
                         </div>
-                        <button type="submit" class="btn btn-primary">登入</button>
+                        <button type="submit" class="btn btn-primary" id="send">登入</button>
                         <button type="reset" class="btn btn-secondary">清除</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-
+   
 
 
     <!-- container1 輪播區-->
@@ -714,6 +715,7 @@
                     <!-- str.substr( 1, 10 );  ( 從字串中的哪一個位置開始提取 , 要提取的字的長度有幾個字 )-->
 
                     <script>
+                        /*
                     $(".ssaa li").hover(
                         function() {
                             $("#altt").html("<pre>" + $(this).children(".all").html() + "</pre>")
@@ -725,6 +727,7 @@
                             $("#altt").hide()
                         }
                     )
+                        */
                     </script>
                 </div>
                 <div class="col-12 col-lg-6 news-box" style="width:100%; padding:10px; height:350px;">
@@ -1773,6 +1776,42 @@
                 title.classList.remove("fixed-top");
             }
         };
+
+        //登入區
+        $("#send").on("click", function() {
+
+            let formData = {
+                acc: $("#acc").val(),
+                pw: $("#pw").val(),
+            }
+                       
+            $.post("api/chkAccPw.php", formData, function(res) {
+                let _ok = parseInt(res);
+              
+                
+                if (_ok == 0) {
+                    alert("請輸入正確的帳號密碼");
+                }
+                // console.log("abc",_ok);
+                // alert("登入成功");
+                // $_SESSION['login']=1;
+                // $("#loginModal").hide();
+                alert("登入成功");
+              
+                window.location.href = "admin.php";
+                // $("#loginModal").on("hidden.bs.modal", function() {
+                //     alert("登入成功1111");
+                //     // $("#loginModal").dispose();
+                //     if (_ok != 0) {
+                //         // window.location.href = "admin_main.php";
+                //         alert("登入成功");
+                //     }
+                // })
+                     
+            });
+        
+            })
+            
         </script>
 
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
