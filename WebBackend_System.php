@@ -102,7 +102,8 @@
         display: inline-block;
         padding-left: 100%;
         animation: marquee 30s linear infinite;
-        animation-delay: 0s; /* 讓動畫立刻開始 */
+        animation-delay: 0s;
+        /* 讓動畫立刻開始 */
     }
 
     @keyframes marquee {
@@ -527,9 +528,9 @@
 
     <!-- 登入Modal -->
     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog d-flex align-items-center justify-content-center">
             <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header text-center">
                     <h5 class="modal-title" id="loginModalLabel">管理員登入</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
@@ -543,14 +544,17 @@
                             <label for="pw" class="form-label">密碼</label>
                             <input type="password" class="form-control" id="pw" name="pw" required>
                         </div>
-                        <button type="submit" class="btn btn-primary" id="send">登入</button>
-                        <button type="reset" class="btn btn-secondary">清除</button>
+                        <div class="d-flex justify-content-center">
+                            <button type="submit" class="btn btn-primary" id="send">登入</button>
+                            <button type="reset" class="btn btn-danger ms-2">清除</button>
+                        </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-   
+
+
 
 
     <!-- container1 輪播區-->
@@ -689,7 +693,7 @@
                         $all_news=$News->all(['sh'=>1]," limit 5");
                         foreach($all_news as $n){
                         echo "<li class='mb-2'>";
-                        echo mb_substr($n['text'],0,20);
+                        echo mb_substr($n['text'],0,25);
                         echo "<span class='all' style='display:none'>";
                         echo $n['text'];
                         echo "</span>";
@@ -715,7 +719,6 @@
                     <!-- str.substr( 1, 10 );  ( 從字串中的哪一個位置開始提取 , 要提取的字的長度有幾個字 )-->
 
                     <script>
-                        /*
                     $(".ssaa li").hover(
                         function() {
                             $("#altt").html("<pre>" + $(this).children(".all").html() + "</pre>")
@@ -727,7 +730,6 @@
                             $("#altt").hide()
                         }
                     )
-                        */
                     </script>
                 </div>
                 <div class="col-12 col-lg-6 news-box" style="width:100%; padding:10px; height:350px;">
@@ -1215,18 +1217,12 @@
     </div>
 
     <br>
-    <hr class=" featurette-divider" id="page3">
+    <hr class=" featurette-divider">
 
 
     <div class="container my-5" data-aos="fade-up" data-aos-delay="100">
         <div class="position-relative p-5 text-center text-muted bg-body border border-dashed rounded-5">
-            <!-- <button type="button"
-                class="position-absolute top-0 end-0 p-3 m-3 btn-close bg-secondary bg-opacity-10 rounded-pill"
-                aria-label="Close"></button>
-            <svg class="bi mt-5 mb-3" width="48" height="48">
-                <use xlink:href="#check2-circle" />
-            </svg> -->
-            <h1 class="fw-bold" style="color: sienna">【 學習有趣　挑戰無懼 】</h1>
+            <h1 class="fw-bold" style="color: sienna">【 動動小手－學習有趣　挑戰無懼 】</h1>
             <main class="form-signin w-100 m-auto">
                 <form>
                     <!-- 點擊圖片觸發新視窗 -->
@@ -1256,125 +1252,47 @@
     </script>
 
 
-    <hr class="featurette-divider">
+    <hr class="featurette-divider mt-3 py-2" id="page3">
 
-    <div class="container mt-3 container-fluid py-5">
+
+    <div class="container mt-5 container-fluid py-3">
+        <h2 class="text-danger py-5">📢 議題報導/法令規章</h2>
         <div class="row featurette">
-            <div class="col-md-7">
-                <h2 class="featurette-heading fw-normal lh-1">First featurette heading.
-                    <span class="text-body-secondary">It’ll blow your mind.</span>
-                </h2>
-                <p class="lead">Some great placeholder content for the first featurette
-                    here. Imagine some exciting
-                    prose
-                    here.</p>
+            <div class="col-md-6">
+                <h2 class="featurette-heading fw-normal lh-1 py-2 me-5">
+                    30年增加140%碳排</h2>
+                <h3>
+                    <span class="text-body-secondary">
+                        台灣溫室氣體排放趨勢
+                    </span>
+                </h3>
+                <p class="lead py-4">
+                    根據環境部「2024年溫室氣體排放清冊報告」，自1990年至2021年間，台灣的淨溫室氣體排放量大幅增加了約140%，年平均氣溫上升0.78℃，海平面平均高度上升9公分。
+                </p>
+                <p class="lead">
+                    2022年台灣總溫室氣體排放量285.97百萬噸，相較前一年減少4.07%。各排放源之中，以能源部門排放最大宗，占總排放量90.87%；工業製程及產品使用部門排放占7.08%次之。
+                    台灣2025年需達成較2005年減量10%目標，現在只減量1.79%，仍需努力。
+                </p>
             </div>
-            <div class="col-md-5">
-                <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-                    height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
-                    preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <title>Placeholder</title>
-                    <rect width="100%" height="100%" fill="var(--bs-secondary-bg)" /><text x="50%" y="50%"
-                        fill="var(--bs-secondary-color)" dy=".3em">500x500</text>
-                </svg> -->
+            <div class="col-md-6">
                 <div>
-                    <iframe width="100%" height="315"
+                    <iframe width="100%" height="450"
                         src="https://e.infogram.com/_/otGU0mto27YU9MmYc0w3?parent_url=https%3A%2F%2Fesg.tvbs.com.tw%2Fexhibition%2Fcarbon-footprint-verification%2F2025-jan%2Findex.html&amp;src=embed#async_embed"
                         scrolling="no" frameborder="0" allowfullscreen="" title="1990年至2022年總溫室氣體排放量和移除量趨勢"
-                        style="border: none;"></iframe>
+                        style="border: none;">
+                    </iframe>
                 </div>
             </div>
         </div>
+    </div>
 
 
-
-        <hr class="featurette-divider">
-
-        <div class="row featurette">
-            <div class="col-md-6 order-md-2">
-                <div class="row g-4 py-5 row-cols-1 row-cols-lg-2">
-                    <div class="feature col">
-                        <div
-                            class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-                            <svg class="bi" width="1em" height="1em">
-                                <use xlink:href="#collection" />
-                            </svg>
-                        </div>
-                        <h3 class="fs-2 text-body-emphasis">Featured title</h3>
-                        <p>https://cfp-calculate.tw/cfpc/Carbon/WebPage/visitors/FLProductinfo.aspx</p>
-                        <a href="#" class="icon-link">
-                            Call to action
-                            <svg class="bi">
-                                <use xlink:href="#chevron-right" />
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="feature col">
-                        <div
-                            class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-                            <svg class="bi" width="1em" height="1em">
-                                <use xlink:href="#people-circle" />
-                            </svg>
-                        </div>
-                        <h3 class="fs-2 text-body-emphasis">Featured title</h3>
-                        <p>Paragraph of text beneath the heading to explain the heading.
-                            We'll add onto it with
-                            another
-                            sentence
-                            and probably just keep going until we run out of words.</p>
-                        <a href="#" class="icon-link">
-                            Call to action
-                            <svg class="bi">
-                                <use xlink:href="#chevron-right" />
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="feature col">
-                        <div
-                            class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-                            <svg class="bi" width="1em" height="1em">
-                                <use xlink:href="#people-circle" />
-                            </svg>
-                        </div>
-                        <h3 class="fs-2 text-body-emphasis">Featured title</h3>
-                        <p>Paragraph of text beneath the heading to explain the heading.
-                            We'll add onto it with
-                            another
-                            sentence
-                            and probably just keep going until we run out of words.</p>
-                        <a href="#" class="icon-link">
-                            Call to action
-                            <svg class="bi">
-                                <use xlink:href="#chevron-right" />
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="feature col">
-                        <div
-                            class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-                            <svg class="bi" width="1em" height="1em">
-                                <use xlink:href="#people-circle" />
-                            </svg>
-                        </div>
-                        <h3 class="fs-2 text-body-emphasis">Featured title</h3>
-                        <p>Paragraph of text beneath the heading to explain the heading.
-                            We'll add onto it with
-                            another
-                            sentence
-                            and probably just keep going until we run out of words.</p>
-                        <a href="#" class="icon-link">
-                            Call to action
-                            <svg class="bi">
-                                <use xlink:href="#chevron-right" />
-                            </svg>
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-            <div class="col-md-6 order-md-1">
-                <p>1212</p>
-
+    <!-- container2 -->
+    <!-- <div id="page1"></div> -->
+    <div class="container mt-3 container-fluid py-2">
+        <div class="row">
+            <!-- 左側欄位 - 產品介紹表格 -->
+            <div class="col-md-6">
                 <div class="carousel-item active">
                     <a href="https://www.youtube.com/watch?v=_KoEb4LZPaU" title="淨零知多少—政策及相關法規"><img
                             src="/images/2050.jpg" class="d-block w-100"> </a>
@@ -1386,91 +1304,22 @@
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
-
-
-
-            </div>
-        </div>
-
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-    <!-- container2 -->
-    <!-- <div id="page1"></div> -->
-    <div class="container mt-3 container-fluid py-5">
-        <h2 class="text-danger">📢 優惠商品</h2>
-        <p class="specialDiscount mt-3">
-            <b>🔔 歡慶佳節限時折扣： 🦌 滿 800 元 打 8 折 🛷 滿千送神祕小禮 🎁 ~【 數量有限，送完為止 】</b>
-        </p>
-
-        <div class="row">
-            <!-- 左側欄位 - 產品介紹表格 -->
-            <div class="col-md-7">
-                <div>
-                    <iframe width="100%" height="315"
-                        src="https://www.youtube.com/embed/zAMz24kZBSw?si=zQPEqaIp7DkOVV_4" title="YouTube video player"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-
             </div>
 
             <!-- 右側欄位 - 影片 -->
-            <div class="col-md-5 container-fluid">
-                <h2>videos</h2>
-
+            <div class="col-md-6 container-fluid">
                 <div>
-                    <iframe width="100%" height="315"
+                    <iframe width="100%" height="385"
                         src="https://www.youtube.com/embed/_KoEb4LZPaU?si=tD_fXP5JOncX4cLy" title="YouTube video player"
                         frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
-
-                <div>
-                    <iframe width="100%" height="315"
-                        src="https://e.infogram.com/_/otGU0mto27YU9MmYc0w3?parent_url=https%3A%2F%2Fesg.tvbs.com.tw%2Fexhibition%2Fcarbon-footprint-verification%2F2025-jan%2Findex.html&amp;src=embed#async_embed"
-                        scrolling="no" frameborder="0" allowfullscreen="" title="1990年至2022年總溫室氣體排放量和移除量趨勢"
-                        style="border: none;"></iframe>
-                </div>
-
-                <div>
-                    <li id="ctl00_holderSlider_wUctlSlideAD1_repSlideAD_ctl03_liSlideAD"
-                        style="background-repeat: no-repeat; background-position: center center; overflow: hidden; background-image: url(&quot;https://www.moeaea.gov.tw/ECW/content_images/3022.jpg?565123098&quot;); float: none; list-style: none; position: absolute; width: 646px; z-index: 0; display: none;"
-                        class="liSlideAD">
-                        <a id="ctl00_holderSlider_wUctlSlideAD1_repSlideAD_ctl03_lnkSlideAD" title="另開視窗，連結到節約能源"
-                            data-toggle="tooltip" href="../../ad04/home/Home.aspx" target="_blank"
-                            style="width: 100%; display: block;"><img
-                                id="ctl00_holderSlider_wUctlSlideAD1_repSlideAD_ctl03_imgSlideAD"
-                                src="https://www.moeaea.gov.tw/ECW/content_images/3022_s.jpg" alt="節約能源"
-                                style="border-width:0px;width: 100%;"></a>
-                    </li>
-                </div>
-
-                <div>
-                    <li id="ctl00_holderSlider_wUctlSlideAD1_repSlideAD_ctl04_liSlideAD"
-                        style="background-repeat: no-repeat; background-position: center center; overflow: hidden; background-image: url(&quot;https://www.moeaea.gov.tw/ECW/content_images/3023.jpg?1473752652&quot;); float: none; list-style: none; position: absolute; width: 646px; z-index: 0; display: none;"
-                        class="liSlideAD">
-                        <a id="ctl00_holderSlider_wUctlSlideAD1_repSlideAD_ctl04_lnkSlideAD" title="另開視窗，連結到總體能源政策"
-                            data-toggle="tooltip" href="../../ad05/home/Home.aspx" target="_blank"
-                            style="width: 100%; display: block;"><img
-                                id="ctl00_holderSlider_wUctlSlideAD1_repSlideAD_ctl04_imgSlideAD"
-                                src="https://www.moeaea.gov.tw/ECW/content_images/3023_s.jpg" alt="總體能源政策"
-                                style="border-width:0px;width: 100%;"></a>
-                    </li>
-                </div>
             </div>
         </div>
+
+
+        <hr class="featurette-divider">
 
 
         <div class="container mt-4">
@@ -1577,11 +1426,11 @@
 
         <!-- container3 -->
         <div class="container mt-2 container-fluid py-6">
-            <h2 class="text-danger">🏢 店鋪資訊</h2>
+            <!-- <h2 class="text-danger">🏢 店鋪資訊</h2> -->
 
             <div class="row">
                 <!-- 左側欄位 - 產品介紹表格 -->
-                <div class="col-md-8 img-fluid" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-md-6 img-fluid" data-aos="fade-up" data-aos-delay="200">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.7036499805677!2d121.41694067537684!3d25.04412927780987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a7bec9ad74b1%3A0xa639904a89f26435!2z5Yue5YuV6YOo5Yue5YuV5Yqb55m85bGV572y5YyX5Z-65a6c6Iqx6YeR6aas5YiG572y5rOw5bGx6IG35qWt6KiT57e05aC0!5e0!3m2!1szh-TW!2stw!4v1734597116467!5m2!1szh-TW!2stw"
                         width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
@@ -1590,28 +1439,15 @@
                 </div>
 
                 <!-- 左側欄位 - 產品介紹表格 -->
-                <div class="col-md-4">
-                    <br><br><br><br><br>
-                    <h2 class="featurette-heading fw-normal lh-1" style="color: lightcoral;">🛍️ 泰山店
-                        <span class="text-body-secondary">本鋪
-                        </span>
-                    </h2>
-                    <p class="lead mt-4">🕗 營業時間：</p>
-                    <ul>
-                        <li>週一：08:00-17:00</li>
-                        <li>週二：08:00-17:00</li>
-                        <li>週三：08:00-17:00</li>
-                        <li>週四：08:00-17:00</li>
-                        <li>週五：08:00-17:00</li>
-                        <!-- 
-                        <li>週六：10:00-19:00</li>
-                        <li>週日：10:00-19:00</li> 
-                        -->
-                    </ul>
-                    <p class="lead">
-                        🗺️ 地址：<br>
-                        <a class=" lead" href="https://maps.app.goo.gl/1Jt4cp4Siop6ftDy5">新北市泰山區貴子里致遠新村55之1號</a>
-                    </p>
+                <div class="col-md-6">
+                    <div>
+                        <iframe width="100%" height="350"
+                            src="https://www.youtube.com/embed/zAMz24kZBSw?si=zQPEqaIp7DkOVV_4"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -1784,11 +1620,11 @@
                 acc: $("#acc").val(),
                 pw: $("#pw").val(),
             }
-                       
+
             $.post("api/chkAccPw.php", formData, function(res) {
                 let _ok = parseInt(res);
-              
-                
+
+
                 if (_ok == 0) {
                     alert("請輸入正確的帳號密碼");
                 }
@@ -1797,7 +1633,7 @@
                 // $_SESSION['login']=1;
                 // $("#loginModal").hide();
                 alert("登入成功");
-              
+
                 window.location.href = "admin.php";
                 // $("#loginModal").on("hidden.bs.modal", function() {
                 //     alert("登入成功1111");
@@ -1807,11 +1643,10 @@
                 //         alert("登入成功");
                 //     }
                 // })
-                     
+
             });
-        
-            })
-            
+
+        })
         </script>
 
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
