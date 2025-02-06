@@ -12,7 +12,13 @@
         integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" href="./images/aajh0-uwfhp-001.ico" type="image/x-icon" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    
+    <!-- 載入css font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> -->
     <!-- 引入AOS的CSS -->
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
@@ -298,6 +304,12 @@
         color: #007bff;
     }
 
+    .login-icons {
+        color:rgba(60, 200, 154);
+        font-size: 20px;
+        margin-right:10px;
+    }
+
     /* 設置基本樣式 */
     .nav-link {
         color: floralwhite;
@@ -497,24 +509,23 @@
                                     // $file = "./front/{$do}.php";
                                     if (!isset($_SESSION['login'])) { ?>
                                 <li><a class="dropdown-item" href="signup.html"><img src="./images/left01.png"
-                                            alt="管理專區" width="30" height="30"> 管理專區</a></li>
+                                            alt="管理專區" width="30" height="30">管理專區</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
                                 <li><a class="dropdown-item" href="?do=login" data-bs-toggle="modal"
-                                        data-bs-target="#loginModal"><i class="fa-solid fa-user"></i> 管理登入</a></li>
+                                        data-bs-target="#loginModal">
+                                        <i class="fa-solid fa-user login-icons" ></i>管理登入</a></li>
                                 <!-- <li><a class="dropdown-item" href="login.php" data-bs-toggle="modal"
                                         data-bs-target="#loginModal"><i class="fa-solid fa-user"></i> 管理登入</a></li> -->
-                                <li><a class="dropdown-item" href="login.html"><i class="fa-regular fa-user"></i>
-                                        會員登入</a></li>
+                                <li><a class="dropdown-item" href="login.html"><i class="fa-regular fa-user login-icons"></i>會員登入</a></li>
                                 <?php } else { ?>
                                 <li><a class="dropdown-item" href="admin.php"><img src="./images/left01.png" alt="管理專區"
-                                            width="30" height="30"> 管理專區</a></li>
+                                            width="30" height="30">管理專區</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" href="?do=admin.php"><i class="fa-solid fa-user"></i>
-                                        返回管理</a></li>
+                                <li><a class="dropdown-item" href="?do=admin.php"><i class="fa-solid fa-user"></i>返回管理</a></li>
                                 <?php } ?>
 
                             </ul>
