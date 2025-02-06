@@ -1334,7 +1334,7 @@
 
 
         <div class="container mt-4">
-            <h2 style="color: indianred;">碳足跡資料查詢</h2>
+            <h2 style="color: indianred;"><i class="fa-solid fa-shoe-prints text-secondary"></i> 碳足跡資料查詢</h2>
             <p>可以依照「係數名稱」搜尋，並依照公告年份排序。</p>
 
             <!-- 搜尋框 -->
