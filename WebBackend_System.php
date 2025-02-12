@@ -1549,16 +1549,17 @@
 
                 <div class="col-md-5 offset-md-1 mb-3">
                     <form>
-                        <h5>📌 訂閱我們的電子報</h5>
+                        <h5>📌 <button id="myBtn1" class="btn btn-primary" type="button">訂閱我們</button></h5>
                         <p>免費領取掌握每月摘要新鮮事</p>
-                        <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                        
+                        <!-- <div class="d-flex flex-column flex-sm-row w-100 gap-2">
                             <label for="newsletter1" class="visually-hidden">電子郵件</label>
                             <input id="newsletter1" type="text" class="form-control" placeholder="電子郵件">
                             <button class="btn btn-primary" type="button">訂閱</button>
-                        </div>
+                        </div> -->
                     </form>
                     <h5 class="py-3">
-                        進站總人數 :
+                    <i class="fa-solid fa-door-open text-body-secondary"></i> 進站總人數 :
                         <?=$Total->find(1)['total'];?>
                     </h5>
                 </div>
@@ -1598,6 +1599,7 @@
         </footer>
 
         <!-- js include 順序 1.bs 2.jq 3.self -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"
             integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg=="
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -1672,6 +1674,30 @@
 
         })
         </script>
+
+<script>
+        $(document).ready(function () {
+            // 1. 綁定事件
+            const myBtn1 = $('#myBtn1');
+           
+            // 2. 點擊 myBtn1 時觸發的 SweetAlert
+            myBtn1.click(async function () {
+                // 等待使用者輸入電子郵件
+                const { value: email } = await Swal.fire({
+                    title: "輸入電子郵件地址",
+                    input: "email",
+                    inputLabel: "您的電子郵件地址",
+                    inputPlaceholder: "請輸入您的電子郵件地址"
+                });
+
+                // 如果使用者輸入了電子郵件，顯示他們輸入的內容
+                if (email) {
+                    Swal.fire(`輸入信箱: ${email}`);
+                }
+            });
+        });
+    </script>
+
 
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 
