@@ -1675,28 +1675,28 @@
         })
         </script>
 
-<script>
-        $(document).ready(function () {
-            // 1. 綁定事件
-            const myBtn1 = $('#myBtn1');
-           
-            // 2. 點擊 myBtn1 時觸發的 SweetAlert
-            myBtn1.click(async function () {
-                // 等待使用者輸入電子郵件
-                const { value: email } = await Swal.fire({
-                    title: "輸入電子郵件地址",
-                    input: "email",
-                    inputLabel: "您的電子郵件地址",
-                    inputPlaceholder: "請輸入您的電子郵件地址"
-                });
+        <script>
+            $(document).ready(function () {
+                // 1. 綁定事件
+                const myBtn1 = $('#myBtn1');
+            
+                // 2. 點擊 myBtn1 時觸發的 SweetAlert
+                myBtn1.click(async function () {
+                    // 等待使用者輸入電子郵件
+                    const { value: email } = await Swal.fire({
+                        title: "輸入電子郵件地址",
+                        input: "email",
+                        inputLabel: "您的電子郵件地址",
+                        inputPlaceholder: "請輸入您的電子郵件地址"
+                    });
 
-                // 如果使用者輸入了電子郵件，顯示他們輸入的內容
-                if (email) {
-                    Swal.fire(`輸入信箱: ${email}`);
-                }
+                    // 如果使用者輸入了電子郵件，顯示他們輸入的內容
+                    if (email) {
+                        Swal.fire(`輸入信箱: ${email}`);
+                    }
+                });
             });
-        });
-    </script>
+        </script>
 
 
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
